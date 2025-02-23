@@ -13,6 +13,9 @@
     # Alejandra
     alejandra.url = "github:kamadorueda/alejandra/3.1.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Hyprpanel
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = {
@@ -20,6 +23,7 @@
     nixpkgs,
     home-manager,
     alejandra,
+    hyprpanel,
     ...
   } @ inputs: let
     inherit (self) outputs;

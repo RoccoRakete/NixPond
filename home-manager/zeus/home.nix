@@ -1,4 +1,9 @@
-{outputs, ...}: {
+{
+  outputs,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./dotfile-overwrites.nix
     ../prgs/nvim.nix
@@ -6,6 +11,7 @@
     ../git/git.nix
     ../hyprland/hyprland.nix
     ../kitty/kitty.nix
+    ./styling.nix
   ];
 
   nixpkgs = {
@@ -38,7 +44,7 @@
     homeDirectory = "/home/martin";
   };
 
-  # home.packages = with pkgs; [ steam ];
+  home.packages = with pkgs; [inputs.hyprpanel.packages.${system}.default];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

@@ -71,6 +71,30 @@
           "$mainMod ALT , up    , movewindow, u"
           "$mainMod ALT , down  , movewindow, d"
 
+          # Move active workspace to external monitor
+          "$mainMod CTRL       , 1 , moveworkspacetomonitor , 1  1"
+          "$mainMod CTRL       , 2 , moveworkspacetomonitor , 2  1"
+          "$mainMod CTRL       , 3 , moveworkspacetomonitor , 3  1"
+          "$mainMod CTRL       , 4 , moveworkspacetomonitor , 4  1"
+          "$mainMod CTRL       , 5 , moveworkspacetomonitor , 5  1"
+          "$mainMod CTRL       , 6 , moveworkspacetomonitor , 6  1"
+          "$mainMod CTRL       , 7 , moveworkspacetomonitor , 7  1"
+          "$mainMod CTRL       , 8 , moveworkspacetomonitor , 8  1"
+          "$mainMod CTRL       , 9 , moveworkspacetomonitor , 9  1"
+          "$mainMod CTRL       , 0 , moveworkspacetomonitor , 10 1"
+
+          # Move active workspace to internal monitor
+          "$mainMod CTRL SHIFT , 1 , moveworkspacetomonitor , 1  0"
+          "$mainMod CTRL SHIFT , 2 , moveworkspacetomonitor , 2  0"
+          "$mainMod CTRL SHIFT , 3 , moveworkspacetomonitor , 3  0"
+          "$mainMod CTRL SHIFT , 4 , moveworkspacetomonitor , 4  0"
+          "$mainMod CTRL SHIFT , 5 , moveworkspacetomonitor , 5  0"
+          "$mainMod CTRL SHIFT , 6 , moveworkspacetomonitor , 6  0"
+          "$mainMod CTRL SHIFT , 7 , moveworkspacetomonitor , 7  0"
+          "$mainMod CTRL SHIFT , 8 , moveworkspacetomonitor , 8  0"
+          "$mainMod CTRL SHIFT , 9 , moveworkspacetomonitor , 9  0"
+          "$mainMod CTRL SHIFT , 0 , moveworkspacetomonitor , 10 0"
+
           # Workspace 10
           "$mainMod , 0     , workspace , 10"
           "$mainMod SHIFT , 0 , movetoworkspace , 10"
@@ -99,6 +123,9 @@
         ", XF86AudioMute         , exec , volumectl toggle-mute"
         ", XF86MonBrightnessUp   , exec , lightctl up"
         ", XF86MonBrightnessDown , exec , lightctl down"
+      ];
+      bindl = [
+        ", switch:on:Lid Switch  , exec , ~/.config/hypr/scripts/suspend.sh"
       ];
     };
   };
