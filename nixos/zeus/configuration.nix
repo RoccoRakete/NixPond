@@ -79,6 +79,7 @@
     extraGroups = ["networkmanager" "wheel"];
   };
 
+  programs.hyprland.enable = true;
   programs.zsh.enable = true;
   programs.dconf.enable = true;
   fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);

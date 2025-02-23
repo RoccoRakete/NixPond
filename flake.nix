@@ -16,6 +16,9 @@
 
     # Hyprpanel
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+
+    # Zen-Browser
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = {
@@ -24,6 +27,7 @@
     home-manager,
     alejandra,
     hyprpanel,
+    zen-browser,
     ...
   } @ inputs: let
     inherit (self) outputs;

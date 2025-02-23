@@ -44,7 +44,10 @@
     homeDirectory = "/home/martin";
   };
 
-  home.packages = with pkgs; [inputs.hyprpanel.packages.${system}.default];
+  home.packages = with pkgs; [
+    inputs.hyprpanel.packages.${system}.default
+    inputs.zen-browser.packages."${system}".twilight
+  ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
