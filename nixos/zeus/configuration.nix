@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   outputs,
+  lib,
   ...
 }: {
   imports = [
@@ -9,6 +10,7 @@
     ./hardware-configuration.nix
     ../prgs/nh.nix
     ./pkgs.nix
+    ./bluetooth.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -77,6 +79,8 @@
   };
 
   programs.zsh.enable = true;
+  programs.dconf.enable = true;
+  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   nix = {
     settings = {
@@ -99,6 +103,8 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  services.upower.enable = true;
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [22];

@@ -4,7 +4,7 @@
     # x11.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
-    size = 16;
+    size = 24;
   };
 
   gtk = {
@@ -16,13 +16,13 @@
     };
 
     iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
+      package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
 
     font = {
-      name = "Sans";
-      size = 11;
+      name = "LiterationSans Nerd Font";
+      size = 13;
     };
   };
 }
