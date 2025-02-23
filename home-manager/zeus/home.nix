@@ -12,6 +12,7 @@
     ../hyprland/hyprland.nix
     ../kitty/kitty.nix
     ./styling.nix
+    ../wofi/wofi.nix
   ];
 
   nixpkgs = {
