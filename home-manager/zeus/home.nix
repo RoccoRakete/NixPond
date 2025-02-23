@@ -4,6 +4,7 @@
     ../prgs/nvim.nix
     ../zsh/zsh.nix
     ../git/git.nix
+    ../hyprland/hyprland.nix
   ];
 
   nixpkgs = {
