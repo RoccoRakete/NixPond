@@ -82,6 +82,10 @@
       };
 
       # Variables
+      env = [
+        "XCURSOR_THEME                       , Bibata-Modern-Classic"
+        "XCURSOR_SIZE                        , 24"
+      ];
       # "env" = "export                                TERM=xterm";
       # "env" = "XCURSOR_THEME                       , Bibata-Modern-Classic";
       # "env" = "XCURSOR_SIZE                        , 24";

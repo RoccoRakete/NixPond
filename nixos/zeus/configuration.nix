@@ -11,6 +11,7 @@
     ../prgs/nh.nix
     ./pkgs.nix
     ./bluetooth.nix
+    ./gnome.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
