@@ -1,5 +1,5 @@
 {...}: let
-  cfg_dir = "/home/martin/.config/nixcfg/nixos/MediaServer/config";
+  cfg_dir = "/home/martin/MediaServer/config";
 in {
   services.sonarr = {
     enable = true;
