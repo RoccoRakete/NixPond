@@ -3,6 +3,7 @@
     ./dotfile-overwrites.nix
     ../prgs/nvim.nix
     ../zsh/zsh.nix
+    ../git/git.nix
   ];
 
   nixpkgs = {
@@ -39,12 +40,6 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "martin";
-    userEmail = "m.schaumann@mscloud.uk";
-  };
-  programs.gh.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
