@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   services = {
     # Enable the X11 windowing system.
     xserver.enable = true;
@@ -19,7 +19,7 @@
       lidSwitchExternalPower = "ignore";
     };
     upower = {
-      # ignoreLid = true;
+      ignoreLid = lib.mkDefault true;
     };
     udev.extraRules = ''
       # DFU (Internal bootloader for STM32 and AT32 MCUs)

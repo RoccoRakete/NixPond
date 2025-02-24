@@ -125,7 +125,7 @@
         ", XF86MonBrightnessDown , exec , brightnessctl set 5%-"
       ];
       bindl = [
-        ", switch:on:Lid Switch  , exec , ~/.config/hypr/scripts/suspend.sh"
+        ", switch:on:Lid Switch  , exec , ~/.config/nixcfg/home-manager/hyprland/scripts/suspend.sh"
       ];
     };
   };
