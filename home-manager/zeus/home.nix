@@ -13,6 +13,7 @@
     ../kitty/kitty.nix
     ./styling.nix
     ../wofi/wofi.nix
+    ../clipse/clipse.nix
   ];
 
   nixpkgs = {

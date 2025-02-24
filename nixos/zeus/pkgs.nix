@@ -8,6 +8,8 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     gcc
     brightnessctl
+    betaflight-configurator
+    super-slicer-beta
     pulseaudio
     cifs-utils
     nodejs_23
