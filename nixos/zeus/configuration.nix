@@ -7,6 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ../prgs/nh.nix
+    ../prgs/gaming.nix
     ./pkgs.nix
     ./bluetooth.nix
     ./gnome.nix
