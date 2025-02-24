@@ -2,7 +2,6 @@
   pkgs,
   inputs,
   outputs,
-  lib,
   ...
 }: {
   imports = [
@@ -16,6 +15,12 @@
     ./programms.nix
     inputs.home-manager.nixosModules.home-manager
   ];
+
+  nix = {
+    settings = {
+      experimental-features = "nix-command flakes";
+    };
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -46,14 +51,6 @@
     extraGroups = ["networkmanager" "wheel"];
   };
 
-  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-
-  nix = {
-    settings = {
-      experimental-features = "nix-command flakes";
-    };
-  };
-
   home-manager = {
     extraSpecialArgs = {inherit inputs outputs;};
     users = {
@@ -64,5 +61,5 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "24.11";
 }

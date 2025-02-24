@@ -6,6 +6,7 @@
     ./hypr_misc.nix
     ./hypr_monitor.nix
     ./hypr_autostart.nix
+    ./hyprlock.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   inputs,
   ...
 }: {
@@ -19,4 +20,7 @@
     wl-clipboard
     inputs.alejandra.packages.${system}.default
   ];
+
+  # Install Nerd-Fonts
+  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
