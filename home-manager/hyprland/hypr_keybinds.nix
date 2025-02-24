@@ -96,8 +96,8 @@
           "$mainMod CTRL SHIFT , 0 , moveworkspacetomonitor , 10 0"
 
           # Workspace 10
-          "$mainMod , 0     , workspace , 10"
-          "$mainMod SHIFT , 0 , movetoworkspace , 10"
+          # "$mainMod , 0     , workspace , 10"
+          # "$mainMod SHIFT , 0 , movetoworkspace , 10"
         ]
         ++ (
           # workspaces
@@ -110,7 +110,7 @@
                 "$mainMod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
               ]
             )
-            9)
+            10)
         );
       bindm = [
         # Move/resize windows with mainMod + LMB/RMB and dragging
@@ -118,11 +118,11 @@
         "$mainMod , mouse:273 , resizewindow"
       ];
       bindle = [
-        ", XF86AudioRaiseVolume  , exec , volumectl -u up"
-        ", XF86AudioLowerVolume  , exec , volumectl -u down"
-        ", XF86AudioMute         , exec , volumectl toggle-mute"
-        ", XF86MonBrightnessUp   , exec , lightctl up"
-        ", XF86MonBrightnessDown , exec , lightctl down"
+        ", XF86AudioRaiseVolume  , exec , pactl set-sink-volume @DEFAULT_SINK@ +5%"
+        ", XF86AudioLowerVolume  , exec , pactl set-sink-volume @DEFAULT_SINK@ -5%"
+        ", XF86AudioMute         , exec , pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        ", XF86MonBrightnessUp   , exec , brightnessctl set +5%"
+        ", XF86MonBrightnessDown , exec , brightnessctl set 5%-"
       ];
       bindl = [
         ", switch:on:Lid Switch  , exec , ~/.config/hypr/scripts/suspend.sh"

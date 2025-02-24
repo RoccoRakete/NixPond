@@ -74,6 +74,7 @@
       layerrule = [
         "blur                 , waybar"
         "noanim               , wofi"
+        "ignorealpha 0        , wofi"
         "dimaround            , wofi"
         "animation fadeDim    , wofi"
         "animation workspaces , swaync-control-center"
