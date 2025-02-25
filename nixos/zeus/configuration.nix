@@ -22,6 +22,12 @@
     settings = {
       experimental-features = "nix-command flakes";
     };
+    # Garbage Collector // Disabled because of "nh"!
+    # gc = {
+    #   automatic = true;
+    #   dates = "daily";
+    #   options = "--delete-older-than 7d";
+    # };
   };
 
   # Set your time zone.
@@ -50,7 +56,16 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "Martin";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "video"
+      "input"
+      "networkmanager"
+      "wheel"
+      "dialout"
+      "libvirtd"
+      "podman"
+      "docker"
+    ];
   };
 
   home-manager = {

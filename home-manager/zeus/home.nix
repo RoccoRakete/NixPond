@@ -14,6 +14,7 @@
     ./styling.nix
     ../wofi/wofi.nix
     ../clipse/clipse.nix
+    ../kanshi/kanshi.nix
   ];
 
   nixpkgs = {

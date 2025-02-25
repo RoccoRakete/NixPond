@@ -17,16 +17,33 @@
     };
   };
 
-  networking.hostName = "zeus"; # Define your hostname.
-  # inetworking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
+  networking = {
+    hostName = "zeus"; # Define your hostname.
+    networkmanager.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [22];
+      checkReversePath = false; # To not block outgoing VPN traffic
+    };
+  };
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+  # Enable the OpenSSH daemon.
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+    };
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable PAM Authentication for Hyprlock
   security.pam.services.hyprlock = {};
+
+  # Enable 32bin Graphics Support
+  hardware.graphics.enable32Bit = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -37,12 +54,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [22];
 
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
