@@ -8,8 +8,16 @@
             criteria = "AOC Q27B3MA 17ZQ7HA002194";
           }
           {
-            transform = "disable";
             criteria = "eDP-1";
+            status = "disable";
+          }
+        ];
+      };
+      undocked = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            status = "enable";
           }
         ];
       };

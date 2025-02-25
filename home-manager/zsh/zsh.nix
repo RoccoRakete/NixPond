@@ -67,6 +67,7 @@
       zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
       [[ ! -f ~/.config/nixcfg/home-manager/zsh/.p10k.zsh ]] || source ~/.config/nixcfg/home-manager/zsh/.p10k.zsh
+      nerdfetch
     '';
   };
 

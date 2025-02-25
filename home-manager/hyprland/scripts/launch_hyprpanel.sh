@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-hyprpanel -q
+pkill swww-daemon
+pkill ags
+pkill gjs
+pkill hyprpanel
 
 # Launch hyprpanel
 hyprpanel &

@@ -16,6 +16,9 @@
     go
     unzip
     fzf
+    nerdfetch
+    lutris
+    nextcloud-client
     nil
     cargo
     wl-clip-persist

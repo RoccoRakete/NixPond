@@ -15,6 +15,7 @@
     ../wofi/wofi.nix
     ../clipse/clipse.nix
     ../kanshi/kanshi.nix
+    ../anyrun/anyrun.nix
   ];
 
   nixpkgs = {
@@ -49,7 +50,7 @@
 
   home.packages = with pkgs; [
     inputs.hyprpanel.packages.${system}.default
-    inputs.zen-browser.packages."${system}".twilight
+    inputs.zen-browser.packages."${system}".beta
   ];
 
   # Enable home-manager and git
