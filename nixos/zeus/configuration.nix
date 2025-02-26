@@ -12,7 +12,7 @@
     ../modules/bluetooth/bluetooth.nix
     ../modules/gnome/gnome.nix
     ./system.nix
-    ./services.nix
+    ../modules/services.nix
     ../modules/programms.nix
     # ../../overlays
     inputs.home-manager.nixosModules.home-manager
