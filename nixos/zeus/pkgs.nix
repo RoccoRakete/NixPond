@@ -5,25 +5,35 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # System
     gcc
-    brightnessctl
-    betaflight-configurator
-    super-slicer-beta
     pulseaudio
     cifs-utils
     nodejs_23
     go
     unzip
-    fzf
-    nerdfetch
-    lutris
-    nextcloud-client
+    playerctl
     nil
     cargo
     wl-clip-persist
     wl-clipboard
     inputs.alejandra.packages.${system}.default
+
+    # User
+    vim
+    betaflight-configurator
+    brightnessctl
+    super-slicer-beta
+    fzf
+    nerdfetch
+    lutris
+    nextcloud-client
+    spotify
+    pavucontrol
+    networkmanagerapplet
+    mission-center
+    grimblast
+    pika-backup
   ];
 
   # Install Nerd-Fonts

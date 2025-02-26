@@ -9,11 +9,11 @@
     ../prgs/nh.nix
     ../prgs/gaming.nix
     ./pkgs.nix
-    ./bluetooth.nix
-    ./gnome.nix
+    ../modules/bluetooth/bluetooth.nix
+    ../modules/gnome/gnome.nix
     ./system.nix
     ./services.nix
-    ./programms.nix
+    ../modules/programms.nix
     # ../../overlays
     inputs.home-manager.nixosModules.home-manager
   ];

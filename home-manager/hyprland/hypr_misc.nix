@@ -16,6 +16,7 @@
         "kb_rules" = "";
         "follow_mouse" = "1";
         "natural_scroll" = "false";
+        "numlock_by_default" = "true";
 
         touchpad = {
           "natural_scroll" = "true";

@@ -47,6 +47,11 @@
           "ALT              , Tab               , cyclenext        ,"
           "$mainMod         , Tab               , bringactivetotop ,"
 
+          # Mediacontrol with mediakeys
+          "                 , XF86AudioPrev     , exec             , playerctl previous"
+          "                 , XF86AudioPlay     , exec             , playerctl play-pause"
+          "                 , XF86AudioNext     , exec             , playerctl next"
+
           # Move focus with mainMod + arrow keys
           "$mainMod , left  , movefocus, l"
           "$mainMod , right , movefocus, r"
