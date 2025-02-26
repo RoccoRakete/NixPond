@@ -6,16 +6,16 @@
 }: {
   imports = [
     ./dotfile-overwrites.nix
-    ../prgs/nvim.nix
-    ../zsh/zsh.nix
-    ../git/git.nix
-    ../hyprland/hyprland.nix
-    ../kitty/kitty.nix
+    ../modules/prgs/nvim.nix
+    ../modules/zsh/zsh.nix
+    ../modules/git/git.nix
+    ../modules/hyprland/hyprland.nix
+    ../modules/kitty/kitty.nix
     ./styling.nix
-    ../wofi/wofi.nix
-    ../clipse/clipse.nix
-    ../kanshi/kanshi.nix
-    ../anyrun/anyrun.nix
+    ../modules/wofi/wofi.nix
+    ../modules/clipse/clipse.nix
+    ../modules/kanshi/kanshi.nix
+    ../modules/anyrun/anyrun.nix
   ];
 
   nixpkgs = {
