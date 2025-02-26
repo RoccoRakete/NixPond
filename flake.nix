@@ -1,5 +1,5 @@
 {
-  description = "Your new nix config";
+  description = "RoccoRakete's Flakes'";
 
   inputs = {
     # Nixpkgs
@@ -38,37 +38,33 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-    # Supported systems for your flake packages, shell, etc.
+    # Supported Platforms
     systems = [
-      "aarch64-linux"
-      "i686-linux"
       "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
     packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
-    # Your custom packages and modifications, exported as overlays
+    # Custom packages and modifications, exported as overlays
     overlays = import ./overlays {inherit inputs;};
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
 
     # NixOS configuration entrypoint
     nixosConfigurations = {
+      # Media Server
       nixos_media = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          # > Our main nixos configuration file <
           ./nixos/MediaServer/configuration.nix
         ];
       };
+      # Zeus (Lenovo T14 G3 Intel)
       zeus = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          # > Our main nixos configuration file <
           ./nixos/zeus/configuration.nix
         ];
       };
