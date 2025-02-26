@@ -11,7 +11,7 @@
     ../modules/git/git.nix
     ../modules/hyprland/hyprland.nix
     ../modules/kitty/kitty.nix
-    ./styling.nix
+    ../modules/styling_adwaita.nix
     ../modules/wofi/wofi.nix
     ../modules/clipse/clipse.nix
     ../modules/kanshi/kanshi.nix
