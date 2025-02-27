@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
@@ -20,8 +24,14 @@
       name = "Adwaita";
     };
 
+    # font = {
+    #   name = "Ubuntu Nerd Font";
+    #   size = 13;
+    # };
+
     font = {
-      name = "Ubuntu Nerd Font";
+      package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
+      name = "SFRounded Nerd Font";
       size = 13;
     };
   };

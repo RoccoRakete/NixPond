@@ -48,6 +48,15 @@
     homeDirectory = "/home/martin";
   };
 
+  xdg.desktopEntries."org.gnome.Settings" = {
+    name = "Settings";
+    comment = "Gnome Control Center";
+    icon = "org.gnome.Settings";
+    exec = "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center --verbose";
+    categories = ["X-Preferences"];
+    terminal = false;
+  };
+
   home.packages = with pkgs; [
     inputs.hyprpanel.packages.${system}.default
     inputs.zen-browser.packages."${system}".beta

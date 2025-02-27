@@ -24,7 +24,7 @@
           #"bind = $mainMod         , R                 , exec             , ~/.config/waybar/launch.sh"
 
           #"bind = $mainMod         , R                 , exec             , launch-waybar"
-          "$mainMod         , R                 , exec             , ~/.config/nixcfg/home-manager/hyprland/scripts/launch_hyprpanel.sh"
+          "$mainMod         , R                 , exec             , ~/.config/nixcfg/home-manager/modules/hyprland/scripts/launch_hyprpanel.sh"
           "$mainMod         , X                 , exec             , hyprctl kill"
           "$mainMod         , F                 , fullscreen"
 

@@ -25,6 +25,11 @@
       url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Apple Fonts
+    apple-fonts = {
+      url = "github:Lyndeno/apple-fonts.nix";
+    };
   };
 
   outputs = {
@@ -35,6 +40,7 @@
     hyprpanel,
     zen-browser,
     anyrun,
+    apple-fonts,
     ...
   } @ inputs: let
     inherit (self) outputs;

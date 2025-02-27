@@ -20,7 +20,7 @@
           # text = cmd[update:1000] echo "<span foreground='##eeeeee'>$(date '+%A, %d %B')</span>"
           color = rgba(250, 250, 250, 0.8)
           font_size = 16
-          font_family = Ubuntu Nerd Font bold
+          font_family = SFRounded Nerd Font bold
           shadow_passes = 3
           position = 0, -120
           halign = center
@@ -31,7 +31,7 @@
           monitor =
           text = cmd[update:1000] echo "<span>$(date '+%H:%M')</span>"
           font_size = 75
-          font_family = Ubuntu Nerd Font bold
+          font_family = SFRounded Nerd Font bold
           shadow_passes = 3
 
           position = 0, -135
@@ -59,7 +59,7 @@
           monitor =
           text = $USER
           font_size = 18
-          font_family = Ubuntu Nerd Font
+          font_family = SFRounded Nerd Font
           shadow_passes = 3
 
           position = 0, -150
@@ -79,7 +79,7 @@
           inner_color = rgba(100, 114, 125, 0.4)
           font_color = rgb(200, 200, 200)
           fade_on_empty = false
-          font_family = Ubuntu Nerd Font
+          font_family = SFRounded Nerd Font
           placeholder_text = <span foreground="##ffffff99">Use me!</span>
           hide_input = false
           position = 0, -210

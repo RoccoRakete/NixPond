@@ -34,6 +34,7 @@
     mission-center
     grimblast
     pika-backup
+    nwg-look
   ];
 
   # Install Nerd-Fonts

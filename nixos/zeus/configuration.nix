@@ -14,6 +14,7 @@
     ./system.nix
     ../modules/services.nix
     ../modules/programms.nix
+    ../modules/nixvim/nixvim.nix
     ../modules/thinkfan/thinkfan.nix
     inputs.home-manager.nixosModules.home-manager
   ];
