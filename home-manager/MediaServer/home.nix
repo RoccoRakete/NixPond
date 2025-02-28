@@ -4,6 +4,7 @@
     ./dotfile-overwrites.nix
     ../modules/zsh/zsh.nix
     ../modules/git/git.nix
+    ../modules/btop/btop.nix
   ];
 
   nixpkgs = {

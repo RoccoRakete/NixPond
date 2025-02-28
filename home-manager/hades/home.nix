@@ -17,6 +17,7 @@
     ../modules/clipse/clipse.nix
     ../modules/kanshi/kanshi.nix
     ../modules/anyrun/anyrun.nix
+    ../modules/btop/btop.nix
   ];
 
   nixpkgs = {
