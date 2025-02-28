@@ -3,7 +3,8 @@
   inputs,
   outputs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ../prgs/nh.nix
@@ -16,6 +17,7 @@
     ../modules/programms.nix
     ../modules/nixvim/nixvim.nix
     ../modules/thinkfan/thinkfan.nix
+    ../modules/nix-alien.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -72,7 +74,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = { inherit inputs outputs; };
     users = {
       martin = import ../../home-manager/zeus/home.nix;
     };

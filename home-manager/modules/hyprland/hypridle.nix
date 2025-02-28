@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   services.hypridle = {
     enable = true;
     settings = {
@@ -10,8 +11,8 @@
       listener = [
         {
           timeout = 300;
-          on-timeout = "~/.config/nixcfg/home-manager/hyprland/scripts/brightness off";
-          on-resume = "~/.config/nixcfg/home-manager/hyprland/scripts/brightness on";
+          on-timeout = "~/.config/nixcfg/home-manager/modules/hyprland/scripts/brightness off";
+          on-resume = "~/.config/nixcfg/home-manager/modules/hyprland/scripts/brightness on";
         }
         {
           timeout = 600;

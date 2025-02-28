@@ -3,7 +3,8 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   environment.systemPackages = with pkgs; [
     # System
     gcc
@@ -17,6 +18,7 @@
     cargo
     wl-clip-persist
     wl-clipboard
+    ripgrep
     inputs.alejandra.packages.${system}.default
 
     # User
@@ -35,8 +37,11 @@
     grimblast
     pika-backup
     nwg-look
+    libreoffice-fresh
   ];
 
   # Install Nerd-Fonts
-  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  fonts.packages =
+    [ ]
+    ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }

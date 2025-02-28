@@ -69,10 +69,16 @@
       {
         key = "<leader>e";
         action = "<CMD>Neotree toggle filesystem float<NL>";
+        options = {
+          desc = "File Explorer";
+        };
       }
       {
         key = "<leader>w";
         action = "<CMD>WhichKey<NL>";
+        options = {
+          desc = "WhichKey";
+        };
       }
       {
         key = "<Tab>";
@@ -80,7 +86,10 @@
       }
       {
         key = "<leader>x";
-        action = "<CMD>BufferClose<NL>";
+        action = "<CMD>:bp <BAR> bd #<CR>";
+        options = {
+          desc = "Close Buffer";
+        };
       }
     ];
 
@@ -102,7 +111,6 @@
       #    theme = "minimalist";
       #  };
       #};
-      #nvim-colorizer.enable = true;
     };
 
     extraPlugins = with pkgs.vimPlugins; [
