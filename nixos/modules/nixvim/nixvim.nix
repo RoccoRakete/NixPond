@@ -67,8 +67,8 @@
         action = "<CMD>Telescope file_browser<NL>";
       }
       {
-        key = "<leader>t";
-        action = "<CMD>Neotree<NL>";
+        key = "<leader>e";
+        action = "<CMD>Neotree toggle filesystem float<NL>";
       }
       {
         key = "<leader>w";
@@ -97,6 +97,8 @@
       gitignore.enable = false;
       noice.enable = true;
       mini.enable = true;
+      web-devicons.enable = true;
+      colorizer.enable = true;
       #airline = {
       #  enable = true;
       #  settings = {

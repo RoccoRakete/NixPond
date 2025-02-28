@@ -5,9 +5,17 @@
     enable = true;
     autoCleanAfterSessionRestore = true;
     closeIfLastWindow = true;
+    popupBorderStyle = "rounded";
 
     window = {
-      position = "left";
+      position = "float";
+      mappings = {
+        "<bs>" = "navigate_up";
+        "." = "set_root";
+        "f" = "fuzzy_finder";
+        "/" = "filter_on_submit";
+        "h" = "show_help";
+      };
     };
 
     filesystem = {
@@ -18,14 +26,6 @@
         forceVisibleInEmptyFolder = true;
         hideGitignored = false;
       };
-    };
-
-    window.mappings = {
-      "<bs>" = "navigate_up";
-      "." = "set_root";
-      "f" = "fuzzy_finder";
-      "/" = "filter_on_submit";
-      "h" = "show_help";
     };
 
     eventHandlers = {
