@@ -9,7 +9,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./media-stack.nix
-    ../prgs/nh.nix
+    ../modules/nh.nix
     ./pkgs.nix
     ../modules/nixvim/nixvim.nix
     inputs.home-manager.nixosModules.home-manager
