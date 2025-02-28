@@ -3,13 +3,15 @@
   inputs,
   outputs,
   ...
-}: {
+}:
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./media-stack.nix
     ../prgs/nh.nix
     ./pkgs.nix
+    ../modules/nixvim/nixvim.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -55,7 +57,10 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "martin";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   programs.zsh.enable = true;
@@ -67,7 +72,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = { inherit inputs outputs; };
     users = {
       # Import your home-manager configuration
       martin = import ../../home-manager/MediaServer/home.nix;
@@ -97,11 +102,11 @@
       "10.7.2.1"
     ];
     hosts = {
-      "10.7.2.90" = ["nixos_media.mscloud.uk"];
+      "10.7.2.90" = [ "nixos_media.mscloud.uk" ];
     };
 
     firewall = {
-      allowedTCPPorts = [22];
+      allowedTCPPorts = [ 22 ];
     };
   };
 
@@ -109,11 +114,13 @@
   fileSystems."/mnt/media" = {
     device = "//10.7.2.100/media";
     fsType = "cifs";
-    options = let
-      # this line prevents hanging on network split
-      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-      cred_dir = "credentials=/home/martin/MediaServer/config/samba/smb-secrets";
-    in ["${automount_opts},${cred_dir},uid=1000,gid=1000"];
+    options =
+      let
+        # this line prevents hanging on network split
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+        cred_dir = "credentials=/home/martin/MediaServer/config/samba/smb-secrets";
+      in
+      [ "${automount_opts},${cred_dir},uid=1000,gid=1000" ];
   };
 
   # Allow unfree packages
