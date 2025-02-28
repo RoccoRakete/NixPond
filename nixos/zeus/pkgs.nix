@@ -19,6 +19,7 @@
     wl-clip-persist
     wl-clipboard
     ripgrep
+    gnome-control-center
     inputs.alejandra.packages.${system}.default
     inputs.nix-alien.packages.${system}.default
 
@@ -39,6 +40,7 @@
     pika-backup
     nwg-look
     libreoffice-fresh
+    nemo
   ];
 
   # Install Nerd-Fonts

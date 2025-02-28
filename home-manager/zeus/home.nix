@@ -50,7 +50,7 @@
   };
 
   xdg.desktopEntries."org.gnome.Settings" = {
-    name = "Settings";
+    name = "Settings-patched";
     comment = "Gnome Control Center";
     icon = "org.gnome.Settings";
     exec = "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center --verbose";

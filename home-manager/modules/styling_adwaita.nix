@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
@@ -11,8 +12,19 @@
     size = 24;
   };
 
+  # dconf.settings = {
+  #   "org/gnome/desktop/interface" = {
+  #     color-scheme = "prefer-dark";
+  #   };
+  # };
+
   gtk = {
     enable = true;
+
+    # theme = {
+    #   name = "Adwaita-dark";
+    #   package = pkgs.gnome-themes-extra;
+    # };
 
     theme = {
       package = pkgs.adw-gtk3;

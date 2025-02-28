@@ -4,7 +4,7 @@
     settings = {
       "$mainMod" = "SUPER";
       "$Term" = "kitty";
-      "$FileManager" = "nautilus";
+      "$FileManager" = "nemo";
       "$browser" = "zen";
       "$editor" = "kitty -o tab_bar_min_tabs=99 -o tab_bar_style=hidden vim";
       # $editor"      = ghostty -e nvim

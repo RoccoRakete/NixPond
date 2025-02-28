@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland = {
     settings = {
       windowrulev2 = [
@@ -23,6 +24,10 @@
         "float        , class:(org.gnome.Nautilus)"
         "size 70% 70% , class:(org.gnome.Nautilus)"
         "center       , class:(org.gnome.Nautilus)"
+
+        "float        , class:(nemo)"
+        "size 70% 70% , class:(nemo)"
+        "center       , class:(nemo)"
 
         "float        , title:(Open Folder)"
         "float        , title:(Open File)"
