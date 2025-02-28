@@ -59,7 +59,6 @@
       full-upgrade-hades = "flake-update && update-hades";
     };
     initExtra = ''
-
       export TERM=kitty
       export EDITOR=nvim
       export MANPAGER='nvim +Man!'
@@ -67,8 +66,6 @@
       export PATH=$PATH:~/go/bin
       eval "$(fzf --zsh)"
       eval "$(zoxide init --cmd cd zsh)"
-      bindkey "^[[3~" delete-char
-      bindkey "^[[A" fzf-history-widget
 
       # Completion styling
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -78,6 +75,8 @@
 
       [[ ! -f ~/.config/nixcfg/home-manager/modules/zsh/.p10k.zsh ]] || source ~/.config/nixcfg/home-manager/modules/zsh/.p10k.zsh
       nerdfetch
+      bindkey "^[[3~" delete-char
+      bindkey "^[[1;3A" fzf-history-widget
     '';
   };
 
