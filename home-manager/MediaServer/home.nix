@@ -2,8 +2,8 @@
 {
   imports = [
     ./dotfile-overwrites.nix
-    ../zsh/zsh.nix
-    ../git/git.nix
+    ../modules/zsh/zsh.nix
+    ../modules/git/git.nix
   ];
 
   nixpkgs = {
