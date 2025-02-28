@@ -57,6 +57,9 @@
 
       update-hades = "nh os switch --hostname hades ~/.config/nixcfg/";
       full-upgrade-hades = "flake-update && update-hades";
+
+      update-ares = "nh os switch --hostname ares ~/.config/nixcfg/";
+      full-upgrade-ares = "flake-update && update-ares";
     };
     initExtra = ''
       export TERM=kitty
