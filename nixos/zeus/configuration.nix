@@ -17,7 +17,7 @@
     ../modules/programms.nix
     ../modules/nixvim/nixvim.nix
     ../modules/thinkfan/thinkfan.nix
-    ../modules/nix-alien.nix
+    # ../modules/nix-alien.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 

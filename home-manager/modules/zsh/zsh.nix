@@ -44,6 +44,9 @@
       ll = "eza -loah --icons=always --no-permissions --git";
       sedit = "sudoedit";
 
+      gita = "cd ~/.config/nixcfg/ && git add -A && git commit -a && cd -";
+      pushd = "cd ~/.config/nixcfg/ && git add -A && git commit -a && git push && cd -";
+
       flake-update = "nix flake update --flake ~/.config/nixcfg/";
 
       update-media = "nh os switch --hostname nixos_media ~/.config/nixcfg/";
