@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./dotfile-overwrites.nix
-    ../modules/prgs/nvim.nix
+    # ../modules/prgs/nvim.nix
     ../modules/zsh/zsh.nix
     ../modules/git/git.nix
     ../modules/hyprland/hyprland.nix

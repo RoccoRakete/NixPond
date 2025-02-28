@@ -30,6 +30,13 @@
     apple-fonts = {
       url = "github:Lyndeno/apple-fonts.nix";
     };
+
+    # NixVim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # If using a stable channel you can use `url = "github:nix-community/nixvim/nixos-<version>"`
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -41,6 +48,7 @@
     zen-browser,
     anyrun,
     apple-fonts,
+    nixvim,
     ...
   } @ inputs: let
     inherit (self) outputs;

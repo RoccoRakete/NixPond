@@ -3,7 +3,7 @@
 {
   programs.nixvim.plugins.which-key = {
     enable = true;
-    settings = {
+      settings = {
       delay = 200;
     };
   };

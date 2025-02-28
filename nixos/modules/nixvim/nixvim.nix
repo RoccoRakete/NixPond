@@ -1,12 +1,18 @@
-{ pkgs, lib, ... }:
-
+{
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 {
   imports = [
+    inputs.nixvim.nixosModules.nixvim # Import the anyrun home-manager module
     ./plugins/autopairs.nix
     ./plugins/bufferline.nix
     ./plugins/cmp.nix
     ./plugins/conform.nix
     ./plugins/illuminate.nix
+    ./plugins/indent-blankline.nix
     ./plugins/lazygit.nix
     ./plugins/lsp.nix
     ./plugins/lualine.nix
@@ -26,12 +32,11 @@
     globals.mapleader = " ";
     clipboard.providers.wl-copy.enable = true;
 
-    colorschemes.vscode = {
+    colorschemes.catppuccin = {
       enable = true;
       settings = {
-        color_overrides = {
-          vscBack = "#101010";
-        };
+        flavour = "mocha";
+        transparent_background = true;
       };
     };
 
@@ -91,6 +96,7 @@
       fugitive.enable = true;
       gitignore.enable = false;
       noice.enable = true;
+      mini.enable = true;
       #airline = {
       #  enable = true;
       #  settings = {
