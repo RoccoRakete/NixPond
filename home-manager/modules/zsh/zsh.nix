@@ -61,6 +61,9 @@
 
       update-ares = "pulld && nh os switch --hostname ares ~/.config/nixcfg/";
       full-upgrade-ares = "flake-update && update-ares";
+
+      update-apollon = "pulld && nh os switch --hostname apollon ~/.config/nixcfg/";
+      full-upgrade-apollon = "flake-update && update-apollon";
     };
     initExtra = ''
       export TERM=kitty

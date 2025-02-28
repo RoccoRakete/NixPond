@@ -103,6 +103,13 @@
             ./nixos/ares/configuration.nix
           ];
         };
+        # Apollon (Lenovo T14 G4 AMD)
+        apollon = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./nixos/apollon/configuration.nix
+          ];
+        };
       };
     };
 }
