@@ -46,19 +46,20 @@
 
       gita = "cd ~/.config/nixcfg/ && git add -A && git commit -a && cd -";
       pushd = "cd ~/.config/nixcfg/ && git add -A && git commit -a && git push && cd -";
+      pulld = "cd ~/.config/nixcfg/ && git add -A && git pull && cd -";
 
-      flake-update = "nix flake update --flake ~/.config/nixcfg/";
+      flake-update = " pulld && nix flake update --flake ~/.config/nixcfg/";
 
-      update-media = "nh os switch --hostname nixos_media ~/.config/nixcfg/";
+      update-media = " pulld && nh os switch --hostname nixos_media ~/.config/nixcfg/";
       full-upgrade-media = "flake-update && update-media";
 
-      update-zeus = "nh os switch --hostname zeus ~/.config/nixcfg/";
+      update-zeus = "pulld && nh os switch --hostname zeus ~/.config/nixcfg/";
       full-upgrade-zeus = "flake-update && update-zeus";
 
-      update-hades = "nh os switch --hostname hades ~/.config/nixcfg/";
+      update-hades = "pulld && nh os switch --hostname hades ~/.config/nixcfg/";
       full-upgrade-hades = "flake-update && update-hades";
 
-      update-ares = "nh os switch --hostname ares ~/.config/nixcfg/";
+      update-ares = "pulld && nh os switch --hostname ares ~/.config/nixcfg/";
       full-upgrade-ares = "flake-update && update-ares";
     };
     initExtra = ''

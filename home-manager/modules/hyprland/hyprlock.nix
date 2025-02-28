@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.hyprlock = {
     enable = true;
     extraConfig = ''
@@ -41,7 +42,7 @@
 
       image {
           monitor =
-          path = ~/.config/nixcfg/home-manager/zeus/backgrounds/face.png
+          path = ~/.config/nixcfg/home-manager/modules/backgrounds/face.png
           size = 130 # lesser side if not 1:1 ratio
           rounding = -1 # negative values mean circle
           border_size = 0
@@ -89,7 +90,7 @@
 
       image {
           monitor =
-          path = ~/.config/nixcfg/home-manager/zeus/backgrounds/hl.png
+          path = ~/.config/nixcfg/home-manager/modules/backgrounds/hl.png
           size = 60 # lesser side if not 1:1 ratio
           rounding = -1 # negative values mean circle
           border_size = 0
