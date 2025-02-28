@@ -96,6 +96,13 @@
             ./nixos/hades/configuration.nix
           ];
         };
+        # Ares (Lenovo T490)
+        ares = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./nixos/ares/configuration.nix
+          ];
+        };
       };
     };
 }
