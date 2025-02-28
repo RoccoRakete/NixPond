@@ -54,6 +54,9 @@
 
       update-zeus = "nh os switch --hostname zeus ~/.config/nixcfg/";
       full-upgrade-zeus = "flake-update && update-zeus";
+
+      update-hades = "nh os switch --hostname hades ~/.config/nixcfg/";
+      full-upgrade-hades = "flake-update && update-hades";
     };
     initExtra = ''
 
