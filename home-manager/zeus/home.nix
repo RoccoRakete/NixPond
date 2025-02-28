@@ -3,7 +3,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./dotfile-overwrites.nix
     # ../modules/prgs/nvim.nix
@@ -53,7 +54,7 @@
     comment = "Gnome Control Center";
     icon = "org.gnome.Settings";
     exec = "env XDG_CURRENT_DESKTOP=GNOME gnome-control-center --verbose";
-    categories = ["X-Preferences"];
+    categories = [ "X-Preferences" ];
     terminal = false;
   };
 

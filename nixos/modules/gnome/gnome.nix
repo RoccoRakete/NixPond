@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     nautilus
     polkit_gnome
@@ -7,7 +8,7 @@
   services.xserver = {
     enable = true;
     displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    # desktopManager.gnome.enable = true;
   };
   services.gnome = {
     tinysparql.enable = true;
