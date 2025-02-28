@@ -79,12 +79,8 @@
         action = "<CMD>:bnext<NL>";
       }
       {
-        key = "<leader>c";
-        action = "<CMD>:bp | bd #<NL>";
-      }
-      {
-        key = "<leader>c";
-        action = "<CMD>:bp | bd #<NL>";
+        key = "<leader>x";
+        action = "<CMD>BufferClose<NL>";
       }
     ];
 

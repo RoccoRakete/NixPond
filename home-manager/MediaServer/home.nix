@@ -1,7 +1,7 @@
-{outputs, ...}: {
+{ outputs, ... }:
+{
   imports = [
     ./dotfile-overwrites.nix
-    ../prgs/nvim.nix
     ../zsh/zsh.nix
     ../git/git.nix
   ];
