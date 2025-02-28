@@ -89,11 +89,11 @@
             ./nixos/zeus/configuration.nix
           ];
         };
-        # xxx (Lenovo T440p)
-        xxx = nixpkgs.lib.nixosSystem {
+        # Hades (Lenovo T440p)
+        hades = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [
-            ./nixos/xxx/configuration.nix
+            ./nixos/hades/configuration.nix
           ];
         };
       };
