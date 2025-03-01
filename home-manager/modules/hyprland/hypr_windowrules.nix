@@ -48,6 +48,8 @@
         "float        , class:(org.gnome.World.PikaBackup)"
         "size 40% 70% , class:(org.gnome.World.PikaBackup)"
         "center       , class:(org.gnome.World.PikaBackup)"
+
+        "immediate    , title:(Red Dead Redemption 2)"
       ];
     };
   };
