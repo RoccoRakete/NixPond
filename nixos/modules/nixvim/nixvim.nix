@@ -120,8 +120,6 @@
     extraConfigLua =
       ''if vim.g.neovide then''
       + "\n"
-      + ''vim.o.guifont = "Hurmit Nerd Font:h12"''
-      + "\n"
       + ''vim.keymap.set('n', '<C-S-s>', ':w<CR>') -- Save''
       + "\n"
       + ''vim.keymap.set('v', '<C-S-c>', '"+y') -- Copy''
