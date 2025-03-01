@@ -29,7 +29,7 @@
     ];
 
     serviceConfig = {
-      ExecStart = "${pkgs.bash}/bin/bash -c 'echo \"Running copyGdmMonitorsXml service\" && mkdir -p /run/gdm/.config && echo \"Created /run/gdm/.config directory\" && [ \"/home/martin/.config/monitors.xml\" -ef \"/run/gdm/.config/monitors.xml\" ] || cp /home/martin/.config/monitors.xml /run/gdm/.config/monitors.xml && echo \"Copied monitors.xml to /run/gdm/.config/monitors.xml\" && chown gdm:gdm /run/gdm/.config/monitors.xml && echo \"Changed ownership of monitors.xml to gdm\"'";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'echo \"Running copyGdmMonitorsXml service\" && mkdir -p /run/gdm/.config && echo \"Created /run/gdm/.config directory\" && [ \"/home/martin/.config/nixcfg/nixos/modules/gnome/monitors.xml\" -ef \"/run/gdm/.config/monitors.xml\" ] || cp /home/martin/.config/nixcfg/nixos/modules/gnome/monitors.xml /run/gdm/.config/monitors.xml && echo \"Copied monitors.xml to /run/gdm/.config/monitors.xml\" && chown gdm:gdm /run/gdm/.config/monitors.xml && echo \"Changed ownership of monitors.xml to gdm\"'";
       Type = "oneshot";
     };
 
