@@ -40,7 +40,6 @@
     pika-backup
     nwg-look
     libreoffice-fresh
-    nemo
   ];
 
   # Install Nerd-Fonts
