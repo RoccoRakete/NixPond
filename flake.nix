@@ -40,6 +40,9 @@
 
     # Nix-Alien
     nix-alien.url = "github:thiagokokada/nix-alien";
+
+    # NixOS Hardware
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -54,6 +57,7 @@
       apple-fonts,
       nixvim,
       nix-alien,
+      nixos-hardware,
       ...
     }@inputs:
     let
@@ -94,6 +98,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./nixos/hades/configuration.nix
+            nixos-hardware.nixosModules.lenovo-thinkpad-t440p
           ];
         };
         # Ares (Lenovo T490)
@@ -101,6 +106,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./nixos/ares/configuration.nix
+            nixos-hardware.nixosModules.lenovo-thinkpad-t490
           ];
         };
         # Apollon (Lenovo T14 G4 AMD)
@@ -108,6 +114,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./nixos/apollon/configuration.nix
+            nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen4
           ];
         };
       };
