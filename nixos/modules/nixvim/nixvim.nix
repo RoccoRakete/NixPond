@@ -18,6 +18,7 @@
     ./plugins/lualine.nix
     ./plugins/luasnip.nix
     ./plugins/neotree.nix
+    ./plugins/render-markdown.nix
     ./plugins/schemastore.nix
     ./plugins/startup.nix
     ./plugins/telescope.nix
@@ -78,6 +79,13 @@
         action = "<CMD>WhichKey<NL>";
         options = {
           desc = "WhichKey";
+        };
+      }
+      {
+        key = "<leader>md";
+        action = "<CMD>:!inlyne %<NL>";
+        options = {
+          desc = "Open Markdown File";
         };
       }
       {
