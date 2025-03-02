@@ -36,6 +36,7 @@
           "path"
           "snippets"
           "buffer"
+          "markdown"
         ];
         providers = {
           buffer = {
@@ -43,6 +44,11 @@
           };
           lsp = {
             fallbacks = [ ];
+          };
+          markdown = {
+            name = "RenderMarkdown";
+            module = "render-markdown.integ.blink";
+            fallbacks = [ "lsp" ];
           };
         };
       };
