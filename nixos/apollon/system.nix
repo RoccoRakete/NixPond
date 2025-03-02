@@ -46,6 +46,8 @@
   # Enable 32bin Graphics Support
   hardware.graphics.enable32Bit = true;
 
+  powerManagement.enable = true;
+
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

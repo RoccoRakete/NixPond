@@ -4,6 +4,7 @@
     nautilus
     polkit_gnome
     seahorse
+    loupe
   ];
   services.xserver = {
     enable = true;

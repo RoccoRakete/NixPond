@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./hypr_vars.nix
   ];
@@ -107,15 +108,18 @@
         ++ (
           # workspaces
           # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
-          builtins.concatLists (builtins.genList (
-              i: let
+          builtins.concatLists (
+            builtins.genList (
+              i:
+              let
                 ws = i + 1;
-              in [
+              in
+              [
                 "$mainMod, code:1${toString i}, workspace, ${toString ws}"
                 "$mainMod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
               ]
-            )
-            10)
+            ) 10
+          )
         );
       bindm = [
         # Move/resize windows with mainMod + LMB/RMB and dragging
@@ -126,11 +130,12 @@
         ", XF86AudioRaiseVolume  , exec , pactl set-sink-volume @DEFAULT_SINK@ +5%"
         ", XF86AudioLowerVolume  , exec , pactl set-sink-volume @DEFAULT_SINK@ -5%"
         ", XF86AudioMute         , exec , pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        ", XF86AudioMicMute      , exec , pactl set-source-mute @DEFAULT_SOURCE@ toggle"
         ", XF86MonBrightnessUp   , exec , brightnessctl set +5%"
         ", XF86MonBrightnessDown , exec , brightnessctl set 5%-"
       ];
       bindl = [
-        ", switch:on:Lid Switch  , exec , ~/.config/nixcfg/home-manager/hyprland/scripts/suspend.sh"
+        ", switch:on:Lid Switch  , exec , ~/.config/nixcfg/home-manager/modules/hyprland/scripts/suspend.sh"
       ];
     };
   };
