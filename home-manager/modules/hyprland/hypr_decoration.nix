@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
   ];
   wayland.windowManager.hyprland = {
@@ -8,7 +9,7 @@
         "gaps_in" = "3";
         "gaps_out" = "7";
         "border_size" = "2";
-        "col.active_border" = "rgba(48688Bff) rgba(B77DA2ff) 45deg";
+        "col.active_border" = "rgba(385899ff) rgba(7FA5D5ff) 45deg";
         "col.inactive_border" = "rgba(595959ff)";
         "layout" = "master";
         "resize_on_border" = "true";

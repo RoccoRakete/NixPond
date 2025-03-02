@@ -40,6 +40,7 @@
     pika-backup
     nwg-look
     libreoffice-fresh
+    inlyne
   ];
 
   # Install Nerd-Fonts
