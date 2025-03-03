@@ -9,6 +9,9 @@
         "float        , class:(nm-connection-editor)"
         "center       , class:(nm-connection-editor)"
 
+        "float        , class:(org.gnome.Calculator)"
+        "center       , class:(org.gnome.Calculator)"
+
         "float        , class:(betaflight-configurator)"
         "center       , class:(betaflight-configurator)"
         "size 80% 80% , class:(betaflight-configurator)"

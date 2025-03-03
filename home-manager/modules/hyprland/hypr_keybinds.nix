@@ -15,7 +15,7 @@
           "$mainMod         , B                 , exec             , $browser"
           "$mainMod         , C                 , exec             , $editor"
           "CONTROL SHIFT    , Escape            , exec             , missioncenter"
-          "                 , XF86Keyboard      , exec             , gnome-calculator"
+          "                 , XF86Calculator    , exec             , gnome-calculator"
           "$mainMod         , D                 , exec             , vesktop"
           "$mainMod         , O                 , exec             , obsidian"
 

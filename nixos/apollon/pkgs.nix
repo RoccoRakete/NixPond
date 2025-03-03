@@ -41,6 +41,7 @@
     nwg-look
     libreoffice-fresh
     inlyne
+    gnome-calculator
   ];
 
   # Install Nerd-Fonts
