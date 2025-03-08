@@ -1,6 +1,8 @@
-{...}: let
+{ ... }:
+let
   cfg_dir = "/home/martin/MediaServer/config";
-in {
+in
+{
   services.sonarr = {
     enable = true;
     openFirewall = true;
@@ -12,6 +14,12 @@ in {
     openFirewall = true;
     user = "martin";
     dataDir = "${cfg_dir}/radarr/Radarr/";
+  };
+  services.lidarr = {
+    enable = true;
+    openFirewall = true;
+    user = "martin";
+    dataDir = "${cfg_dir}/lidarr/Lidarr/";
   };
   services.sabnzbd = {
     enable = true;
