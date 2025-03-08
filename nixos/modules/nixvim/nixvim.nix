@@ -112,6 +112,32 @@
       mini.enable = true;
       web-devicons.enable = true;
       colorizer.enable = true;
+      rustaceanvim = {
+        enable = true;
+        settings = {
+          server = {
+            # cmd = [
+            #   "rustup"
+            #   "run"
+            #   "nightly"
+            #   "rust-analyzer"
+            # ];
+            default_settings = {
+              rust-analyzer = {
+                check = {
+                  command = "clippy";
+                };
+                inlayHints = {
+                  lifetimeElisionHints = {
+                    enable = "always";
+                  };
+                };
+              };
+            };
+            standalone = true;
+          };
+        };
+      };
       #airline = {
       #  enable = true;
       #  settings = {

@@ -16,6 +16,9 @@
     playerctl
     nil
     cargo
+    rust-analyzer
+    rustup
+    rustfmt
     wl-clip-persist
     wl-clipboard
     ripgrep

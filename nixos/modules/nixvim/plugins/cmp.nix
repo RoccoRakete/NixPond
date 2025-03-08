@@ -1,6 +1,9 @@
 {
   programs.nixvim.plugins.blink-cmp = {
     enable = true;
+    # luaConfig.pre = ''
+    #   fuzzy.implementation = 'lua'
+    # '';
     settings = {
       appearance = {
         nerd_font_variant = "normal";
@@ -11,7 +14,7 @@
           auto_brackets = {
             enabled = true;
             semantic_token_resolution = {
-              enabled = false;
+              enabled = true;
             };
           };
         };
