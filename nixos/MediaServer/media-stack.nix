@@ -24,6 +24,7 @@ in
   services.headphones = {
     enable = true;
     user = "martin";
+    dataDir = "${cfg_dir}/headphones/Headphones";
   };
   services.sabnzbd = {
     enable = true;
