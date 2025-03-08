@@ -24,6 +24,7 @@ in
   services.headphones = {
     enable = true;
     user = "martin";
+    host = "0.0.0.0";
     dataDir = "${cfg_dir}/headphones/Headphones";
   };
   services.sabnzbd = {
