@@ -21,6 +21,10 @@ in
     user = "martin";
     dataDir = "${cfg_dir}/lidarr/Lidarr/";
   };
+  services.headphones = {
+    enable = true;
+    user = "martin";
+  };
   services.sabnzbd = {
     enable = true;
     openFirewall = true;
