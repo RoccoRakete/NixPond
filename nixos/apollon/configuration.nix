@@ -17,6 +17,7 @@
     ../modules/programms.nix
     ../modules/nixvim/nixvim.nix
     ../modules/thinkfan/thinkfan.nix
+    ../modules/docker/docker.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
