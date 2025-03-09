@@ -17,8 +17,11 @@
     nil
     cargo
     rust-analyzer
+    # vscode.fhs
+    # vscode
     rustup
     rustfmt
+    nixfmt-rfc-style
     wl-clip-persist
     wl-clipboard
     ripgrep

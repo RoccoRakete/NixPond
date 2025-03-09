@@ -19,6 +19,7 @@
     ../modules/anyrun/anyrun.nix
     ../modules/btop/btop.nix
     ../modules/nemo/nemo.nix
+    ../modules/vscode/vscode.nix
   ];
 
   nixpkgs = {

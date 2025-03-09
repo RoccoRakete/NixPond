@@ -43,6 +43,9 @@
 
     # NixOS Hardware
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
+    # Nix VSCode Extensions
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs =
@@ -58,6 +61,7 @@
       nixvim,
       nix-alien,
       nixos-hardware,
+      nix-vscode-extensions,
       ...
     }@inputs:
     let
