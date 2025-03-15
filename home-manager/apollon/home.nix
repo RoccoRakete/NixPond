@@ -20,6 +20,7 @@
     ../modules/btop/btop.nix
     ../modules/nemo/nemo.nix
     ../modules/vscode/vscode.nix
+    ../modules/zed-editor/zed.nix
   ];
 
   nixpkgs = {
@@ -62,7 +63,7 @@
   };
 
   home.packages = with pkgs; [
-    inputs.hyprpanel.packages.${system}.default
+    # inputs.hyprpanel.packages.${system}.default
     inputs.zen-browser.packages."${system}".beta
   ];
 

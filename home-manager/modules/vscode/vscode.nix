@@ -48,6 +48,17 @@ in
       "workbench.startupEditor" = "none";
       "explorer.compactFolders" = false;
       "editor.formatOnSave" = true;
+      # Nix
+      # "nix.enableLanguageServer" = true;
+      # "nix.formatterPath" = "nixfmt";
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
+      "nil.formatting.command" = "nil";
+      "[nix]" = {
+        "editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "nil.formatting.command" = "nil";
+
+      };
       # Whitespace
       "files.trimTrailingWhitespace" = true;
       "files.trimFinalNewlines" = true;

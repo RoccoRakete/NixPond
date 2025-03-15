@@ -31,6 +31,7 @@
 
     # User
     vim
+    inputs.hyprpanel.packages.${system}.default
     betaflight-configurator
     brightnessctl
     super-slicer-beta
@@ -40,6 +41,7 @@
     nextcloud-client
     spotify
     pavucontrol
+    baobab
     networkmanagerapplet
     mission-center
     grimblast
