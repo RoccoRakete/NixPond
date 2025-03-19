@@ -15,15 +15,15 @@
         hash = "sha256-VIygMzCPTKzLr47bG1DYy/zj0OxsjGcms0G1BkI/TEI=";
       };
     };
-    jellyseerr = prev.jellyseerr.overrideAttrs {
+    jellyseerr = prev.jellyseerr.overrideAttrs (finalAttrs: {
       version = "2.5.1";
       src = prev.fetchFromGitHub {
         owner = "Fallenbagel";
-        tag = "v${prev.version}";
+        tag = "v${finalAttrs}";
         repo = "jellyseerr";
         hash = "sha256-vAMuiHcf13CDyOB0k36DXUk+i6K6h/R7dmBLJsMkzNA=";
       };
-    };
+    });
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will
