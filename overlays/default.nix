@@ -21,7 +21,7 @@
         owner = "Fallenbagel";
         tag = "v2.5.1";
         repo = "jellyseerr";
-        hash = "sha256-vAMuiHcf13CDyOB0k36DXUk+i6K6h/R7dmBLJsMkzNA=";
+        hash = "xxx";
       };
     };
   };
