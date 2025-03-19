@@ -95,6 +95,11 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./nixos/zeus/configuration.nix
+            {
+              nixpkgs.overlays = [
+                inputs.hyprpanel.overlay
+              ];
+            }
           ];
         };
         # Hades (Lenovo T440p)
@@ -103,6 +108,11 @@
           modules = [
             ./nixos/hades/configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-t440p
+            {
+              nixpkgs.overlays = [
+                inputs.hyprpanel.overlay
+              ];
+            }
           ];
         };
         # Ares (Lenovo T490)
@@ -111,6 +121,11 @@
           modules = [
             ./nixos/ares/configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-t490
+            {
+              nixpkgs.overlays = [
+                inputs.hyprpanel.overlay
+              ];
+            }
           ];
         };
         # Apollon (Lenovo T14 G4 AMD)
@@ -119,6 +134,11 @@
           modules = [
             ./nixos/apollon/configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen4
+            {
+              nixpkgs.overlays = [
+                inputs.hyprpanel.overlay
+              ];
+            }
           ];
         };
       };

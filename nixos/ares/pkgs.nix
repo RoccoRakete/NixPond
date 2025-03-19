@@ -24,6 +24,7 @@
     inputs.nix-alien.packages.${system}.default
 
     # User
+    hyprpanel
     vim
     betaflight-configurator
     brightnessctl

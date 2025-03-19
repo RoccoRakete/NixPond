@@ -4,6 +4,11 @@
   ...
 }:
 {
+
+  home.packages = with pkgs; [
+    gnome-themes-extra
+  ];
+
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
@@ -18,6 +23,15 @@
   #   };
   # };
 
+  dconf = {
+    settings = {
+      "org/gnome/desktop/interface" = {
+        # gtk-theme = "Adwaita-dark";
+        color-scheme = "prefer-dark";
+      };
+    };
+  };
+
   gtk = {
     enable = true;
 
@@ -25,6 +39,18 @@
     #   name = "Adwaita-dark";
     #   package = pkgs.gnome-themes-extra;
     # };
+
+    gtk3 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = 1;
+      };
+    };
+
+    gtk4 = {
+      extraConfig = {
+        gtk-application-prefer-dark-theme = 1;
+      };
+    };
 
     theme = {
       package = pkgs.adw-gtk3;
@@ -46,5 +72,11 @@
       name = "SFRounded Nerd Font";
       size = 13;
     };
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+    configPackages = with pkgs; [ xdg-desktop-portal-gtk ];
   };
 }

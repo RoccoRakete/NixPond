@@ -73,6 +73,7 @@
       };
     };
   };
+
   services = {
     udev.extraRules = ''
       # DFU (Internal bootloader for STM32 and AT32 MCUs)

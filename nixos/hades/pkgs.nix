@@ -25,6 +25,7 @@
     # User
     vim
     betaflight-configurator
+    hyprpanel
     brightnessctl
     super-slicer-beta
     fzf

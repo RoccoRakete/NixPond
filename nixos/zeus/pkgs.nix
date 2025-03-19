@@ -27,6 +27,7 @@
     vim
     betaflight-configurator
     brightnessctl
+    hyprpanel
     super-slicer-beta
     fzf
     nerdfetch

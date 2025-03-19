@@ -31,13 +31,14 @@
 
     # User
     vim
-    inputs.hyprpanel.packages.${system}.default
+    hyprpanel
     betaflight-configurator
     brightnessctl
     super-slicer-beta
     fzf
     nerdfetch
     lutris
+    bitwarden
     nextcloud-client
     spotify
     pavucontrol

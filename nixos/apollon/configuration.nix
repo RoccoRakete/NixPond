@@ -17,7 +17,8 @@
     ../modules/programms.nix
     ../modules/nixvim/nixvim.nix
     ../modules/thinkfan/thinkfan.nix
-    ../modules/docker/docker.nix
+    # ../modules/docker/docker.nix
+    ../modules/podman/podman.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -36,6 +37,10 @@
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  environment.sessionVariables = {
+    ADW_DISABLE_PORTAL = "1";
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
