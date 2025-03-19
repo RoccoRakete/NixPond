@@ -11,9 +11,9 @@
       "$launcher" = "anyrun";
       "$LockScreen" = "hyprlock -q";
       "$ScreenArea" =
-        "grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'Screenshot_%d-%m-%y_%H-%M.png')";
+        "export GRIMBLAST_HIDE_CURSOR=1 && grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'Screenshot_%d-%m-%y_%H-%M.png')";
       "$ScreenShot" =
-        "grimblast --notify copysave output ~/Pictures/Screenshots/$(date +'Screenshot_%d-%m-%y_%H-%M.png')";
+        "export GRIMBLAST_HIDE_CURSOR=1 && grimblast --notify copysave output ~/Pictures/Screenshots/$(date +'Screenshot_%d-%m-%y_%H-%M.png') /home/martin/Pictures/Screenshots/Screenshot_19-03-25_18-46.png";
     };
   };
 }
