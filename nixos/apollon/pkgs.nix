@@ -36,6 +36,7 @@
     brightnessctl
     super-slicer-beta
     fzf
+    obsidian
     nerdfetch
     lutris
     bitwarden
