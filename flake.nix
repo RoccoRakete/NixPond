@@ -1,5 +1,5 @@
 {
-  description = "NixPond";
+  description = "NixPond :)";
 
   inputs = {
     # Nixpkgs
