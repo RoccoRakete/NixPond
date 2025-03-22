@@ -41,6 +41,7 @@
     lutris
     bitwarden
     nextcloud-client
+    glab
     spotify
     pavucontrol
     baobab
