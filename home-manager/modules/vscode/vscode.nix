@@ -27,6 +27,7 @@ in
 
       ])
       ++ (with marketplace; [
+        mkhl.direnv
         rust-lang.rust-analyzer
         ms-azuretools.vscode-docker
         mub.one-monokai-forked
@@ -39,6 +40,8 @@ in
         jnoortheen.nix-ide
         teabyii.ayu
         vadimcn.vscode-lldb
+        gitlab.gitlab-workflow
+        golang.go
       ]);
     # Settings
     profiles.default.userSettings = {
@@ -53,12 +56,7 @@ in
       # "nix.formatterPath" = "nixfmt";
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
-      "nil.formatting.command" = "nil";
-      "[nix]" = {
-        "editor.defaultFormatter" = "jnoortheen.nix-ide";
-        "nil.formatting.command" = "nil";
-
-      };
+      "nix.serverSettings.nil.formatting.command" = [ "nixfmt" ];
       # Whitespace
       "files.trimTrailingWhitespace" = true;
       "files.trimFinalNewlines" = true;

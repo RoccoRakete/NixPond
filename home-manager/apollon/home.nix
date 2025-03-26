@@ -20,7 +20,8 @@
     ../modules/btop/btop.nix
     ../modules/nemo/nemo.nix
     ../modules/vscode/vscode.nix
-    ../modules/zed-editor/zed.nix
+    # ../modules/zed-editor/zed.nix
+    ../modules/dev/dev.nix
   ];
 
   nixpkgs = {

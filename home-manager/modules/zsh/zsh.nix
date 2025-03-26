@@ -18,7 +18,9 @@
     zplug = {
       enable = true;
       plugins = [
-        { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
+        {
+          name = "zsh-users/zsh-autosuggestions";
+        } # Simple plugin installation
         {
           name = "romkatv/powerlevel10k";
           tags = [
@@ -34,7 +36,7 @@
         src = pkgs.fetchFromGitHub {
           owner = "Aloxaf";
           repo = "fzf-tab";
-          rev = "c2b4aa5ad2532cca91f23908ac7f00efb7ff09c9";
+          rev = "01dad759c4466600b639b442ca24aebd5178e799";
           sha256 = "1b4pksrc573aklk71dn2zikiymsvq19bgvamrdffpf7azpq6kxl2";
         };
       }
@@ -74,6 +76,10 @@
       eval "$(fzf --zsh)"
       eval "$(zoxide init --cmd cd zsh)"
 
+      autoload -U compinit; compinit
+      enable-fzf-tab
+
+
       # Completion styling
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
       zstyle ':completion:*' menu no
@@ -88,6 +94,7 @@
   };
 
   programs.fzf.enable = true;
+  programs.fzf.enableZshIntegration = true;
   programs.zoxide.enable = true;
   programs.eza.enable = true;
   programs.bat.enable = true;
@@ -98,5 +105,6 @@
     zsh-syntax-highlighting
     zsh-powerlevel10k
     zinit
+    zsh-fzf-tab
   ];
 }

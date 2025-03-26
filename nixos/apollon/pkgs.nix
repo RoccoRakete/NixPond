@@ -10,13 +10,17 @@
     gcc
     pulseaudio
     cifs-utils
+    gnupg
     nodejs_23
     go
     unzip
     playerctl
     nil
     cargo
+    rustc
+    cargo
     rust-analyzer
+    direnv
     # vscode.fhs
     # vscode
     rustup
@@ -31,6 +35,8 @@
 
     # User
     vim
+    libappindicator-gtk3
+    libayatana-appindicator
     hyprpanel
     betaflight-configurator
     brightnessctl
