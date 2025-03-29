@@ -36,6 +36,5 @@ in
   services.jellyseerr = {
     enable = true;
     openFirewall = true;
-    # configDir = "${cfg_dir}/jellyseerr/data/config";
   };
 }
