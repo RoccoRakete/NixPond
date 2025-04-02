@@ -21,6 +21,8 @@
     cargo
     rust-analyzer
     direnv
+    jq
+    libnotify
     # vscode.fhs
     # vscode
     rustup

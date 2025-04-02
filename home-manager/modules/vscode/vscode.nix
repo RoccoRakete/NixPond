@@ -42,6 +42,7 @@ in
         vadimcn.vscode-lldb
         gitlab.gitlab-workflow
         golang.go
+        ionutvmi.path-autocomplete
       ]);
     # Settings
     profiles.default.userSettings = {

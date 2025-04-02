@@ -51,6 +51,13 @@
 
     # Nix VSCode Extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    # Plasma-Manager
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
@@ -67,6 +74,7 @@
       nix-alien,
       nixos-hardware,
       nix-vscode-extensions,
+      plasma-manager,
       ...
     }@inputs:
     let

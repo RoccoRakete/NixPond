@@ -87,6 +87,8 @@
     };
   };
 
+  services.desktopManager.plasma6.enable = true;
+
   nixpkgs = {
     # You can add overlays here
     overlays = [

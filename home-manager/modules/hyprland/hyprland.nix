@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   imports = [
     ./hypr_vars.nix
     ./hypr_keybinds.nix
@@ -9,6 +10,7 @@
     ./hyprlock.nix
     ./hypridle.nix
     ./hypr_windowrules.nix
+    ./styling_adwaita.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

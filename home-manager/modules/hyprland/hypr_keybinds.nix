@@ -1,4 +1,7 @@
 { ... }:
+let
+  script_dir = "~/.config/nixcfg/home-manager/modules/hyprland/scripts/";
+in
 {
   imports = [
     ./hypr_vars.nix
@@ -23,7 +26,8 @@
           "$mainMod         , SPACE             , exec             , $launcher"
           "$mainMod         , R                 , exec             , hyprpanel -q && hyprpanel &"
           "$mainMod         , X                 , exec             , hyprctl kill"
-          "$mainMod         , F                 , fullscreen"
+          "$mainMod         , F                 , fullscreen       "
+          "$mainMod SHIFT   , O                 , exec             , ${script_dir}toggle_screen.sh"
 
           # NixOS
           "$mainMod Alt_L   , R                 , exec             , hyprctl reload"
@@ -32,8 +36,8 @@
           "$mainMod         , L                 , exec             , $LockScreen"
           "$mainMod SHIFT   , S                 , exec             , $ScreenArea"
           "                 , Print             , exec             , $ScreenShot"
-          "$mainMod Alt_L   , M                 , exec             , ~/.config/hypr/scripts/w2m.sh"
-          "$mainMod SHIFT   , P                 , exec             , ~/.config/hypr/scripts/power-profile-switcher.sh"
+          "$mainMod Alt_L   , M                 , exec             , ${script_dir}w2m.sh"
+          "$mainMod SHIFT   , P                 , exec             , ${script_dir}power-profile-switcher.sh"
           "$mainMod SHIFT   , C                 , exec             , hyprpicker -a"
 
           # Window management
@@ -131,7 +135,7 @@
         ", XF86MonBrightnessDown , exec , brightnessctl set 5%-"
       ];
       bindl = [
-        ", switch:on:Lid Switch  , exec , ~/.config/nixcfg/home-manager/modules/hyprland/scripts/suspend.sh"
+        ", switch:on:Lid Switch  , exec , ${script_dir}suspend.sh"
       ];
     };
   };

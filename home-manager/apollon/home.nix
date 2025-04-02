@@ -7,12 +7,10 @@
 {
   imports = [
     ./dotfile-overwrites.nix
-    # ../modules/prgs/nvim.nix
     ../modules/zsh/zsh.nix
     ../modules/git/git.nix
     ../modules/hyprland/hyprland.nix
     ../modules/kitty/kitty.nix
-    ../modules/styling_adwaita.nix
     ../modules/wofi/wofi.nix
     ../modules/clipse/clipse.nix
     ../modules/kanshi/kanshi.nix
@@ -20,8 +18,8 @@
     ../modules/btop/btop.nix
     ../modules/nemo/nemo.nix
     ../modules/vscode/vscode.nix
-    # ../modules/zed-editor/zed.nix
     ../modules/dev/dev.nix
+    ../modules/plasma/plasma.nix
   ];
 
   nixpkgs = {

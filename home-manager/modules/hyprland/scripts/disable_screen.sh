@@ -13,7 +13,7 @@ while true; do
     # Überprüfen, ob sich der Status geändert hat
     if [ "$DOCKED" != "$LAST_DOCKED_STATE" ]; then
         if [ "$DOCKED" = "yes" ]; then
-            #hyprctl dispatch dpms off eDP-1 
+            #hyprctl dispatch dpms off eDP-1
 
             # Definiere Zeilen für den "docked"-Zustand
             LINE1="monitor   = HDMI-A-1 , 2560x1440@75, 1280x1280, 1"
@@ -23,7 +23,7 @@ while true; do
             sed -i "/^monitor\s*=\s*HDMI-A-1/c\\$LINE1" "$CONFIG_FILE"
             sed -i "/^monitor\s*=\s*eDP-1/c\\$LINE2" "$CONFIG_FILE"
 
-            hyprctl dispatch swapactiveworkspaces eDP-1 HDMI-A-1 
+            hyprctl dispatch swapactiveworkspaces eDP-1 HDMI-A-1
 
         else
 
@@ -36,7 +36,7 @@ while true; do
             sed -i "/^monitor\s*=\s*eDP-1/c\\$LINE4" "$CONFIG_FILE"
 
             #hyprctl dispatch dpms on eDP-1
-            
+
         fi
 
         # Aktualisiere den gespeicherten Docked-Status
