@@ -19,6 +19,7 @@
     ../modules/thinkfan/thinkfan.nix
     # ../modules/docker/docker.nix
     ../modules/podman/podman.nix
+    ../modules/samba/ad-client.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
