@@ -11,7 +11,7 @@ let
   samba = cfg.package;
   nssModulesPath = config.system.nssModules.path;
   adDomain = "mscloud.uk";
-  adWorkgroup = "mscloud";
+  adWorkgroup = "msc";
   adNetbiosName = "mscloud";
   staticIp = "10.7.2.90";
 in
