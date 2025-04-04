@@ -12,6 +12,7 @@
     ../modules/nh.nix
     ./pkgs.nix
     ../modules/nixvim/nixvim.nix
+    ../modules/samba/dc.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 

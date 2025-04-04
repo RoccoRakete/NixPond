@@ -29,6 +29,7 @@ in
       ++ (with marketplace; [
         mkhl.direnv
         rust-lang.rust-analyzer
+        tauri-apps.tauri-vscode
         ms-azuretools.vscode-docker
         mub.one-monokai-forked
         yzhang.markdown-all-in-one
