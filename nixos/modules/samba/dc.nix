@@ -10,7 +10,7 @@ let
   cfg = config.services.samba;
   samba = cfg.package;
   nssModulesPath = config.system.nssModules.path;
-  adDomain = "ad.mscloud.uk";
+  adDomain = "mscloud.uk";
   adWorkgroup = "msc";
   adNetbiosName = "mscloud";
   staticIp = "10.7.2.90";
