@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.kitty = {
     enable = true;
     font = {
@@ -11,7 +12,7 @@
       tab_bar_style = "powerline";
       tab_powerline_style = "slanted";
       tab_title_template = "{title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}";
-      hide_window_decorations = "yes";
+      hide_window_decorations = "no";
       enable_audio_bell = "no";
 
       "foreground" = "#bdc3df";

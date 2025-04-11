@@ -11,7 +11,7 @@
     ../modules/gaming.nix
     ./pkgs.nix
     ../modules/bluetooth/bluetooth.nix
-    ../modules/gnome/gnome.nix
+    # ../modules/gnome/gnome.nix
     ./system.nix
     ../modules/services.nix
     ../modules/programms.nix
@@ -19,7 +19,7 @@
     ../modules/thinkfan/thinkfan.nix
     # ../modules/docker/docker.nix
     ../modules/podman/podman.nix
-    ../modules/samba/ad-client.nix
+    # ../modules/samba/ad-client.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
@@ -82,6 +82,7 @@
   };
 
   home-manager = {
+    backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       martin = import ../../home-manager/apollon/home.nix;
@@ -89,6 +90,7 @@
   };
 
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
 
   nixpkgs = {
     # You can add overlays here

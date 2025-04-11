@@ -58,6 +58,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    # powertray
+    powertray.url = "github:RoccoRakete/powertray";
   };
 
   outputs =
@@ -75,6 +78,7 @@
       nixos-hardware,
       nix-vscode-extensions,
       plasma-manager,
+      powertray,
       ...
     }@inputs:
     let

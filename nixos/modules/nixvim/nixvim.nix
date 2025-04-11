@@ -33,11 +33,22 @@
     globals.mapleader = " ";
     clipboard.providers.wl-copy.enable = true;
 
-    colorschemes.catppuccin = {
+    colorschemes.vscode = {
       enable = true;
       settings = {
-        flavour = "mocha";
-        transparent_background = true;
+        transparent = true;
+        disable_nvimtree_bg = true;
+        group_overrides = {
+          NeoTreeDimText = {
+            bg = "NONE";
+          };
+          NeoTreeFloatBorder = {
+            bg = "#0E0E0E";
+          };
+          NeoTreeFloatTitle = {
+            bg = "#0E0E0E";
+          };
+        };
       };
     };
 

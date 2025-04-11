@@ -28,6 +28,7 @@ in
       ])
       ++ (with marketplace; [
         mkhl.direnv
+        fill-labs.dependi
         rust-lang.rust-analyzer
         tauri-apps.tauri-vscode
         ms-azuretools.vscode-docker

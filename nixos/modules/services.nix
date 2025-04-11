@@ -1,4 +1,5 @@
-{lib, ...}: {
+{ lib, ... }:
+{
   services = {
     # Enable the X11 windowing system.
     xserver.enable = true;
@@ -7,7 +8,6 @@
       layout = "de";
       variant = "";
     };
-    upower.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
     # ollama.enable = false;
@@ -15,11 +15,8 @@
     power-profiles-daemon.enable = true;
     logind = {
       lidSwitchDocked = "ignore";
-      lidSwitch = "ignore";
+      lidSwitch = "suspend";
       lidSwitchExternalPower = "ignore";
-    };
-    upower = {
-      ignoreLid = lib.mkDefault true;
     };
   };
 }

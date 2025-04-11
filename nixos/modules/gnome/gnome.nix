@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     nautilus
@@ -19,6 +19,11 @@
   };
   programs = {
     gnome-disks.enable = true;
+  };
+
+  services.upower = {
+    enable = true;
+    ignoreLid = lib.mkDefault true;
   };
 
   systemd.services.copyGdmMonitorsXml = {

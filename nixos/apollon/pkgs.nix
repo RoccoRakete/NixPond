@@ -34,6 +34,7 @@
     gnome-control-center
     inputs.alejandra.packages.${system}.default
     inputs.nix-alien.packages.${system}.default
+    # inputs.powertray.packages.${system}
 
     # User
     vim
