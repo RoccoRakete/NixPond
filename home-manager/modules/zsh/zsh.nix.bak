@@ -15,6 +15,21 @@
       saveNoDups = true;
       findNoDups = true;
     };
+    zplug = {
+      enable = true;
+      plugins = [
+        {
+          name = "zsh-users/zsh-autosuggestions";
+        } # Simple plugin installation
+        {
+          name = "romkatv/powerlevel10k";
+          tags = [
+            "as:theme"
+            "depth:1"
+          ];
+        } # Installations with additional options. For the list of options, please refer to Zplug README.
+      ];
+    };
     plugins = [
       {
         name = "fzf-tab";
@@ -58,34 +73,24 @@
       export MANPAGER='nvim +Man!'
       export PATH=$PATH:/usr/local/go/bin
       export PATH=$PATH:~/go/bin
+      eval "$(fzf --zsh)"
       eval "$(zoxide init --cmd cd zsh)"
 
+      autoload -U compinit; compinit
+      enable-fzf-tab
+
+
+      # Completion styling
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+      zstyle ':completion:*' menu no
+      zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+      zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+      [[ ! -f ~/.config/nixcfg/home-manager/modules/zsh/.p10k.zsh ]] || source ~/.config/nixcfg/home-manager/modules/zsh/.p10k.zsh
       nerdfetch
       bindkey "^[[3~" delete-char
       bindkey "^[[1;3A" fzf-history-widget
     '';
-  };
-
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = false;
-      localip = {
-        disabled = false;
-        ssh_only = true;
-      };
-      hostname = {
-        disabled = false;
-        ssh_only = false;
-      };
-      status = {
-        disabled = false;
-      };
-      sudo = {
-        disabled = false;
-      };
-      "$schema" = "https://starship.rs/config-schema.json";
-    };
   };
 
   programs.fzf.enable = true;
@@ -96,5 +101,10 @@
   programs.git.enable = true;
 
   home.packages = with pkgs; [
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-powerlevel10k
+    zinit
+    zsh-fzf-tab
   ];
 }
