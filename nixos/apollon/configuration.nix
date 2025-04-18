@@ -11,7 +11,7 @@
     ../modules/gaming.nix
     ./pkgs.nix
     ../modules/bluetooth/bluetooth.nix
-    # ../modules/gnome/gnome.nix
+    ../modules/gnome/gnome.nix
     ./system.nix
     ../modules/services.nix
     ../modules/programms.nix
@@ -89,8 +89,8 @@
     };
   };
 
-  services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = true;
+  # services.desktopManager.plasma6.enable = true;
+  # services.displayManager.sddm.enable = true;
 
   nixpkgs = {
     # You can add overlays here
@@ -104,6 +104,19 @@
     config = {
       allowUnfree = true;
     };
+  };
+
+  # For mount.cifs, required unless domain name resolution is not needed.
+  fileSystems."/mnt/TrueNAS" = {
+    device = "//truenas/data";
+    fsType = "cifs";
+    options =
+      let
+        # this line prevents hanging on network split
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+        cred_dir = "credentials=/home/martin/samba/smb-secrets";
+      in
+      [ "${automount_opts},${cred_dir},uid=1000,gid=1000" ];
   };
 
   system.stateVersion = "24.11";

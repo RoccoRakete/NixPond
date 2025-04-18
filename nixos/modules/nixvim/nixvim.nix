@@ -25,6 +25,7 @@
     ./plugins/treesitter.nix
     ./plugins/undotree.nix
     ./plugins/whichkey.nix
+    ./plugins/yazi.nix
   ];
 
   programs.nixvim = {
@@ -33,22 +34,30 @@
     globals.mapleader = " ";
     clipboard.providers.wl-copy.enable = true;
 
-    colorschemes.vscode = {
+    # colorschemes.vscode = {
+    #   enable = true;
+    #   settings = {
+    #     transparent = true;
+    #     disable_nvimtree_bg = true;
+    #     group_overrides = {
+    #       NeoTreeDimText = {
+    #         bg = "NONE";
+    #       };
+    #       NeoTreeFloatBorder = {
+    #         bg = "#0E0E0E";
+    #       };
+    #       NeoTreeFloatTitle = {
+    #         bg = "#0E0E0E";
+    #       };
+    #     };
+    #   };
+    # };
+
+    colorschemes.monokai-pro = {
       enable = true;
       settings = {
-        transparent = true;
-        disable_nvimtree_bg = true;
-        group_overrides = {
-          NeoTreeDimText = {
-            bg = "NONE";
-          };
-          NeoTreeFloatBorder = {
-            bg = "#0E0E0E";
-          };
-          NeoTreeFloatTitle = {
-            bg = "#0E0E0E";
-          };
-        };
+        transparent_background = true;
+        devicons = true;
       };
     };
 
@@ -78,11 +87,18 @@
         key = "<leader>bb";
         action = "<CMD>Telescope file_browser<NL>";
       }
+      # {
+      #   key = "<leader>e";
+      #   action = "<CMD>Neotree toggle filesystem float<NL>";
+      #   options = {
+      #     desc = "File Explorer";
+      #   };
+      # }
       {
         key = "<leader>e";
-        action = "<CMD>Neotree toggle filesystem float<NL>";
+        action = "<CMD>Yazi<NL>";
         options = {
-          desc = "File Explorer";
+          desc = "Yazi";
         };
       }
       {

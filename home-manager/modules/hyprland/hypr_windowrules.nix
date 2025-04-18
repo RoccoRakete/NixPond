@@ -53,6 +53,8 @@
         "center       , class:(org.gnome.World.PikaBackup)"
 
         "immediate    , title:(Red Dead Redemption 2)"
+
+        "float        , workspace:7"
       ];
     };
   };

@@ -9,18 +9,19 @@
     ./dotfile-overwrites.nix
     ../modules/zsh/zsh.nix
     ../modules/git/git.nix
-    # ../modules/hyprland/hyprland.nix
+    ../modules/hyprland/hyprland.nix
     ../modules/kitty/kitty.nix
     ../modules/wofi/wofi.nix
     ../modules/clipse/clipse.nix
     ../modules/kanshi/kanshi.nix
-    # ../modules/anyrun/anyrun.nix
+    ../modules/anyrun/anyrun.nix
     ../modules/btop/btop.nix
     # ../modules/nemo/nemo.nix
     ../modules/vscode/vscode.nix
     ../modules/dev/dev.nix
-    ../modules/styling_adwaita.nix
-    ../modules/plasma/plasma.nix
+    # ../modules/styling_adwaita.nix
+    # ../modules/plasma/plasma.nix
+    ../modules/firefox/firefox.nix
   ];
 
   nixpkgs = {

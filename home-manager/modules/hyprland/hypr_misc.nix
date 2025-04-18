@@ -21,7 +21,7 @@
 
         touchpad = {
           "natural_scroll" = "true";
-          "scroll_factor" = "0.2";
+          "scroll_factor" = "0.3";
           "tap-to-click" = "false";
           "tap_button_map" = "l";
           "clickfinger_behavior" = "true";
@@ -61,7 +61,7 @@
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
       misc = {
-        "vfr" = "true";
+        "vfr" = "false";
         "vrr" = "0";
         "animate_manual_resizes" = "false";
         "render_ahead_of_time" = "false";

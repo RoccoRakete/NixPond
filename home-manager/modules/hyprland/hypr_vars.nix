@@ -4,8 +4,9 @@
     settings = {
       "$mainMod" = "SUPER";
       "$Term" = "kitty";
-      "$FileManager" = "nemo";
-      "$browser" = "zen";
+      # "$FileManager" = "nemo";
+      "$FileManager" = "kitty -o tab_bar_min_tabs=99 -o tab_bar_style=hidden yazi";
+      "$browser" = "zen-beta";
       "$editor" = "kitty -o tab_bar_min_tabs=99 -o tab_bar_style=hidden vim";
       # $editor"      = ghostty -e nvim
       "$launcher" = "anyrun";

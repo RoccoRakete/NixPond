@@ -88,6 +88,18 @@
     };
   };
 
+  programs.yazi = {
+    enable = true;
+    settings = {
+      manager = {
+        show_hidden = true;
+        # sort_by = "mtime";
+        # sort_dir_first = true;
+        # sort_reverse = true;
+      };
+    };
+  };
+
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
   programs.zoxide.enable = true;

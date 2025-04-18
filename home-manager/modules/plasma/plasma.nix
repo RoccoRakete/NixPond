@@ -10,7 +10,7 @@
     kdePackages.kcolorpicker
   ];
   programs.plasma = {
-    enable = false;
+    enable = true;
     shortcuts = {
       "ActivityManager"."switch-to-activity-b783d9b4-8eb7-4b96-b973-afd016a4894b" = [ ];
       "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
@@ -65,6 +65,10 @@
       "kwin"."ExposeClassCurrentDesktop" = [ ];
       "kwin"."Grid View" = "Meta+G";
       "kwin"."Increase Opacity" = "none,,Increase Opacity of Active Window by 5%";
+      "kwin"."KWin Script: Sticky Window Snapping: enable/disable" =
+        ",none,KWin Script: Sticky Window Snapping: enable/disable";
+      "kwin"."KWin Script: Sticky Window Snapping: enable/disable temporarily" =
+        ",none,KWin Script: Sticky Window Snapping: enable/disable temporarily";
       "kwin"."KZones: Activate layout 1" = "Meta+Num+1,none,KZones: Activate layout 1";
       "kwin"."KZones: Activate layout 2" = "Meta+Num+2,none,KZones: Activate layout 2";
       "kwin"."KZones: Activate layout 3" = "Meta+Num+3,none,KZones: Activate layout 3";
@@ -111,6 +115,40 @@
         "Ctrl+Alt+Down,none,KZones: Switch to previous window in current zone";
       "kwin"."KZones: Toggle zone overlay" = "Ctrl+Alt+C,none,KZones: Toggle zone overlay";
       "kwin"."Kill Window" = "Meta+X,Meta+Ctrl+Esc,Kill Window";
+      "kwin"."KrohnkiteBTreeLayout" = [ ];
+      "kwin"."KrohnkiteColumnsLayout" = [ ];
+      "kwin"."KrohnkiteDecrease" = [ ];
+      "kwin"."KrohnkiteFloatAll" = "Meta+Shift+F,none,Krohnkite: Toggle Float All";
+      "kwin"."KrohnkiteFloatingLayout" = [ ];
+      "kwin"."KrohnkiteFocusDown" = [ ];
+      "kwin"."KrohnkiteFocusLeft" = [ ];
+      "kwin"."KrohnkiteFocusNext" = [ ];
+      "kwin"."KrohnkiteFocusPrev" = "Meta+\\,,none,Krohnkite: Focus Previous";
+      "kwin"."KrohnkiteFocusRight" = [ ];
+      "kwin"."KrohnkiteFocusUp" = [ ];
+      "kwin"."KrohnkiteGrowHeight" = [ ];
+      "kwin"."KrohnkiteIncrease" = "Meta+I,none,Krohnkite: Increase";
+      "kwin"."KrohnkiteMonocleLayout" = "Meta+M,none,Krohnkite: Monocle Layout";
+      "kwin"."KrohnkiteNextLayout" = [ ];
+      "kwin"."KrohnkitePreviousLayout" = [ ];
+      "kwin"."KrohnkiteQuarterLayout" = [ ];
+      "kwin"."KrohnkiteRotate" = [ ];
+      "kwin"."KrohnkiteRotatePart" = [ ];
+      "kwin"."KrohnkiteSetMaster" = [ ];
+      "kwin"."KrohnkiteShiftDown" = [ ];
+      "kwin"."KrohnkiteShiftLeft" = [ ];
+      "kwin"."KrohnkiteShiftRight" = [ ];
+      "kwin"."KrohnkiteShiftUp" = [ ];
+      "kwin"."KrohnkiteShrinkHeight" = [ ];
+      "kwin"."KrohnkiteShrinkWidth" = [ ];
+      "kwin"."KrohnkiteSpiralLayout" = [ ];
+      "kwin"."KrohnkiteSpreadLayout" = [ ];
+      "kwin"."KrohnkiteStackedLayout" = [ ];
+      "kwin"."KrohnkiteStairLayout" = [ ];
+      "kwin"."KrohnkiteTileLayout" = [ ];
+      "kwin"."KrohnkiteToggleFloat" = "Meta+F,none,Krohnkite: Toggle Float";
+      "kwin"."KrohnkiteTreeColumnLayout" = [ ];
+      "kwin"."KrohnkitegrowWidth" = [ ];
       "kwin"."Move Tablet to Next Output" = [ ];
       "kwin"."MoveMouseToCenter" = "Meta+F6";
       "kwin"."MoveMouseToFocus" = "Meta+F5";
@@ -119,6 +157,26 @@
       "kwin"."MoveZoomRight" = [ ];
       "kwin"."MoveZoomUp" = [ ];
       "kwin"."Overview" = "Meta+W";
+      "kwin"."PoloniumCycleEngine" = "Meta+|,none,Polonium: Cycle Engine";
+      "kwin"."PoloniumFocusAbove" = "Meta+K,none,Polonium: Focus Above";
+      "kwin"."PoloniumFocusBelow" = "Meta+J,none,Polonium: Focus Below";
+      "kwin"."PoloniumFocusLeft" = "Meta+H,none,Polonium: Focus Left";
+      "kwin"."PoloniumFocusRight" = [ ];
+      "kwin"."PoloniumInsertAbove" = "Meta+Shift+K,none,Polonium: Insert Above";
+      "kwin"."PoloniumInsertBelow" = "Meta+Shift+J,none,Polonium: Insert Below";
+      "kwin"."PoloniumInsertLeft" = "Meta+Shift+H,none,Polonium: Insert Left";
+      "kwin"."PoloniumInsertRight" = "Meta+Shift+L,none,Polonium: Insert Right";
+      "kwin"."PoloniumOpenSettings" = "Meta+\\\\,none,Polonium: Open Settings Dialog";
+      "kwin"."PoloniumResizeAbove" = "Meta+Ctrl+K,none,Polonium: Resize Above";
+      "kwin"."PoloniumResizeBelow" = "Meta+Ctrl+J,none,Polonium: Resize Below";
+      "kwin"."PoloniumResizeLeft" = "Meta+Ctrl+H,none,Polonium: Resize Left";
+      "kwin"."PoloniumResizeRight" = "Meta+Ctrl+L,none,Polonium: Resize Right";
+      "kwin"."PoloniumRetileWindow" = [ ];
+      "kwin"."PoloniumSwitchBTree" = [ ];
+      "kwin"."PoloniumSwitchHalf" = [ ];
+      "kwin"."PoloniumSwitchKwin" = [ ];
+      "kwin"."PoloniumSwitchMonocle" = [ ];
+      "kwin"."PoloniumSwitchThreeColumn" = [ ];
       "kwin"."Setup Window Shortcut" = "none,,Setup Window Shortcut";
       "kwin"."Show Desktop" = "Meta+D";
       "kwin"."Switch One Desktop Down" = "Meta+Ctrl+Down";
@@ -330,6 +388,8 @@
       "baloofilerc"."General"."index hidden folders" = true;
       "dolphinrc"."DetailsMode"."ExpandableFolders" = false;
       "dolphinrc"."DetailsMode"."PreviewSize" = 32;
+      "dolphinrc"."ExtractDialog"."1920x1200 screen: Height" = 600;
+      "dolphinrc"."ExtractDialog"."1920x1200 screen: Width" = 1272;
       "dolphinrc"."General"."RememberOpenedTabs" = false;
       "dolphinrc"."General"."ViewPropsTimestamp" = "2025,3,29,12,14,16.283";
       "dolphinrc"."KFileDialog Settings"."Places Icons Auto-resize" = false;
@@ -342,7 +402,10 @@
       "dolphinrc"."Toolbar mainToolBar"."ToolButtonStyle" = "IconOnly";
       "kactivitymanagerdrc"."activities"."b783d9b4-8eb7-4b96-b973-afd016a4894b" = "Default";
       "kactivitymanagerdrc"."main"."currentActivity" = "b783d9b4-8eb7-4b96-b973-afd016a4894b";
-      "kcminputrc"."Libinput/1739/52840/SYNA8019:00 06CB:CE68 Mouse"."PointerAcceleration" = 0.4;
+      "kcminputrc"."Keyboard"."NumLock" = 0;
+      "kcminputrc"."Libinput/1133/45081/Logitech Wireless Mouse MX Master 2S"."PointerAcceleration" =
+        0.600;
+      "kcminputrc"."Libinput/1739/52840/SYNA8019:00 06CB:CE68 Mouse"."PointerAcceleration" = 0.400;
       "kcminputrc"."Libinput/1739/52840/SYNA8019:00 06CB:CE68 Touchpad"."ClickMethod" = 2;
       "kcminputrc"."Libinput/1739/52840/SYNA8019:00 06CB:CE68 Touchpad"."NaturalScroll" = true;
       "kcminputrc"."Libinput/1739/52840/SYNA8019:00 06CB:CE68 Touchpad"."PointerAcceleration" = 0.2;
@@ -364,7 +427,7 @@
         "SFRounded Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."General"."toolBarFont" = "SFRounded Nerd Font,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       "kdeglobals"."Icons"."Theme" = "Papirus-Dark";
-      "kdeglobals"."KDE"."AnimationDurationFactor" = 0.35355339059327373;
+      "kdeglobals"."KDE"."AnimationDurationFactor" = 0.7071067811865475;
       "kdeglobals"."KDE"."SmoothScroll" = false;
       "kdeglobals"."KDE"."widgetStyle" = "Breeze";
       "kdeglobals"."KFileDialog Settings"."Allow Expansion" = false;
@@ -388,13 +451,13 @@
       "kdeglobals"."PreviewSettings"."EnableRemoteFolderThumbnail" = false;
       "kdeglobals"."PreviewSettings"."MaximumRemoteSize" = 0;
       "kdeglobals"."Sounds"."Enable" = false;
-      "kdeglobals"."WM"."activeBackground" = "20,20,20";
+      "kdeglobals"."WM"."activeBackground" = "14,14,14";
       "kdeglobals"."WM"."activeBlend" = "171,171,171";
       "kdeglobals"."WM"."activeFont" = "SFRounded Nerd Font,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
-      "kdeglobals"."WM"."activeForeground" = "222,222,222";
+      "kdeglobals"."WM"."activeForeground" = "199,199,199";
       "kdeglobals"."WM"."inactiveBackground" = "66,66,66";
-      "kdeglobals"."WM"."inactiveBlend" = "234,234,234";
-      "kdeglobals"."WM"."inactiveForeground" = "234,234,234";
+      "kdeglobals"."WM"."inactiveBlend" = "199,199,199";
+      "kdeglobals"."WM"."inactiveForeground" = "199,199,199";
       "kiorc"."Confirmations"."ConfirmDelete" = true;
       "kiorc"."Confirmations"."ConfirmEmptyTrash" = true;
       "kiorc"."Confirmations"."ConfirmTrash" = false;
@@ -414,7 +477,7 @@
       "ktrashrc"."\\/home\\/martin\\/.local\\/share\\/Trash"."UseTimeLimit" = false;
       "kwalletrc"."Wallet"."First Use" = false;
       "kwinrc"."Activities/LastVirtualDesktop"."b783d9b4-8eb7-4b96-b973-afd016a4894b" =
-        "f26d3fc3-956b-4848-be6e-ac6dea8f43de";
+        "49a57c63-f616-4e62-a3ff-12d5c4e51552";
       "kwinrc"."Desktops"."Id_1" = "f26d3fc3-956b-4848-be6e-ac6dea8f43de";
       "kwinrc"."Desktops"."Id_10" = "b6235992-6831-413d-9b48-acfca2f17aff";
       "kwinrc"."Desktops"."Id_2" = "e8d412e2-09c2-4e4b-a003-92f8e56aed27";
@@ -433,18 +496,34 @@
       "kwinrc"."Plugins"."diminactiveEnabled" = true;
       "kwinrc"."Plugins"."dimscreenEnabled" = true;
       "kwinrc"."Plugins"."hidecursorEnabled" = true;
+      "kwinrc"."Plugins"."krohnkiteEnabled" = false;
       "kwinrc"."Plugins"."kzonesEnabled" = true;
+      "kwinrc"."Plugins"."poloniumEnabled" = false;
       "kwinrc"."Plugins"."shakecursorEnabled" = false;
+      "kwinrc"."Plugins"."sticky-window-snappingEnabled" = true;
       "kwinrc"."Plugins"."zoomEnabled" = false;
+      "kwinrc"."Script-krohnkite"."enableSpiralLayout" = false;
+      "kwinrc"."Script-krohnkite"."enableStackedLayout" = true;
+      "kwinrc"."Script-krohnkite"."enableThreeColumnLayout" = false;
+      "kwinrc"."Script-krohnkite"."monocleMaximize" = false;
+      "kwinrc"."Script-krohnkite"."noTileBorder" = true;
+      "kwinrc"."Script-krohnkite"."screenGapBottom" = 5;
+      "kwinrc"."Script-krohnkite"."screenGapLeft" = 5;
+      "kwinrc"."Script-krohnkite"."screenGapRight" = 5;
+      "kwinrc"."Script-krohnkite"."screenGapTop" = 5;
+      "kwinrc"."Script-krohnkite"."tileLayoutGap" = 5;
+      "kwinrc"."Script-polonium"."Borders" = 0;
+      "kwinrc"."Script-polonium"."EngineType" = 3;
+      "kwinrc"."Script-polonium"."InsertionPoint" = 1;
       "kwinrc"."Tiling"."padding" = 4;
       "kwinrc"."Tiling/4c40b185-38ec-590b-9338-b879b1a6c41c"."tiles" =
-        "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
+        "{\"layoutDirection\":\"horizontal\",\"tiles\":[]}";
       "kwinrc"."Tiling/a74ad1a8-ef74-54d0-8416-b8a3397894b2"."tiles" =
         "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
       "kwinrc"."Tiling/b5820530-e2a0-561b-a2a2-ec752c6aab47"."tiles" =
-        "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
+        "{\"layoutDirection\":\"horizontal\",\"tiles\":[]}";
       "kwinrc"."Windows"."DelayFocusInterval" = 0;
-      "kwinrc"."Xwayland"."Scale" = 1;
+      "kwinrc"."Xwayland"."Scale" = 1.25;
       "kwinrc"."org.kde.kdecoration2"."BorderSize" = "None";
       "kwinrc"."org.kde.kdecoration2"."BorderSizeAuto" = false;
       "kwinrc"."org.kde.kdecoration2"."ButtonsOnLeft" = "M";
@@ -454,7 +533,7 @@
       "plasma-localerc"."Formats"."LC_TIME" = "de_DE.UTF-8";
       "plasmanotifyrc"."Applications/com.nextcloud.desktopclient.nextcloud"."Seen" = true;
       "plasmanotifyrc"."Applications/org.gnome.World.PikaBackup"."Seen" = true;
-      "plasmarc"."Theme"."name" = "default";
+      "plasmarc"."Theme"."name" = "Win11OS-dark";
       "plasmarc"."Wallpapers"."usersWallpapers" =
         "/home/martin/.config/nixcfg/home-manager/modules/backgrounds/nix-wallpaper-moonscape.png";
       "spectaclerc"."ImageSave"."lastImageSaveLocation" =

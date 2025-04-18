@@ -2,16 +2,23 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
-    inputs.anyrun.homeManagerModules.anyrun # Import the anyrun home-manager module
+    # inputs.anyrun.homeManagerModules.anyrun # Import the anyrun home-manager module
   ];
   programs.anyrun = {
     enable = true;
     config = {
-      x = {fraction = 0.5;};
-      y = {fraction = 0.3;};
-      width = {fraction = 0.3;};
+      x = {
+        fraction = 0.5;
+      };
+      y = {
+        fraction = 0.3;
+      };
+      width = {
+        fraction = 0.3;
+      };
       hideIcons = false;
       ignoreExclusiveZones = false;
       layer = "overlay";
@@ -30,9 +37,7 @@
     # Inline comments are supported for language injection into
     # multi-line strings with Treesitter! (Depends on your editor)
     extraCss =
-      /*
-      css
-      */
+      # css
       ''
         window {
           background: transparent;
