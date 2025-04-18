@@ -7,6 +7,7 @@
     config = {
       adminpassFile = "/etc/nextcloud-admin-pass";
       dbtype = "mysql";
+      dbpassFile = "/etc/nextcloud-db-pass";
     };
   };
 }
