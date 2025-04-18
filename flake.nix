@@ -107,6 +107,13 @@
             ./nixos/MediaServer/configuration.nix
           ];
         };
+        # NextCloud Server
+        nixos_nextcloud = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./nixos/NextCloud/configuration.nix
+          ];
+        };
         # Zeus (Lenovo T14 G3 Intel)
         zeus = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
