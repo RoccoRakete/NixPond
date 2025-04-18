@@ -11,6 +11,7 @@
     ../modules/nh.nix
     ./pkgs.nix
     ../modules/nixvim/nixvim.nix
+    ../modules/nextcloud/nextcloud.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
