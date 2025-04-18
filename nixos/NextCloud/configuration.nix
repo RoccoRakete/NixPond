@@ -19,7 +19,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "NixOS_NextCloud"; # Define your hostname.
+  networking.hostName = "NixOS-NextCloud"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;
