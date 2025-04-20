@@ -61,6 +61,12 @@
 
     # powertray
     powertray.url = "github:RoccoRakete/powertray";
+
+    # Solaar
+    solaar = {
+      url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz"; # For latest stable version
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -79,6 +85,7 @@
       nix-vscode-extensions,
       plasma-manager,
       powertray,
+      solaar,
       ...
     }@inputs:
     let
@@ -105,6 +112,13 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./nixos/MediaServer/configuration.nix
+          ];
+        };
+        # NextCloud Server
+        nixos_nextcloud = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./nixos/NextCloud/configuration.nix
           ];
         };
         # Zeus (Lenovo T14 G3 Intel)
@@ -151,6 +165,7 @@
           modules = [
             ./nixos/apollon/configuration.nix
             nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen4
+            solaar.nixosModules.default
             {
               nixpkgs.overlays = [
                 inputs.hyprpanel.overlay

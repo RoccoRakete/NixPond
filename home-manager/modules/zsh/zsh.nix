@@ -40,6 +40,9 @@
       update-media = " pulld && nh os switch --hostname nixos_media ~/.config/nixcfg/";
       full-upgrade-media = "flake-update && update-media";
 
+      update-nextcloud = " pulld && nh os switch --hostname nixos_nextcloud ~/.config/nixcfg/";
+      full-upgrade-nextcloud = "flake-update && update-nextcloud";
+
       update-zeus = "pulld && nh os switch --hostname zeus ~/.config/nixcfg/";
       full-upgrade-zeus = "flake-update && update-zeus";
 
