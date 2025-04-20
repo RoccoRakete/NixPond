@@ -5,8 +5,8 @@
     initrd.systemd.enable = true;
     plymouth.enable = true;
     tmp.cleanOnBoot = true;
-    # kernelPackages = pkgs.linuxPackages; # LTS
-    kernelPackages = pkgs.linuxPackages_latest; # Mainline
+    kernelPackages = pkgs.linuxPackages; # LTS
+    # kernelPackages = pkgs.linuxPackages_latest; # Mainline
     kernelParams = [
       "quiet"
       # "nosgx"

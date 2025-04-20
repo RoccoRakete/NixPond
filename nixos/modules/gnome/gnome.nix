@@ -5,6 +5,7 @@
     polkit_gnome
     seahorse
     loupe
+    papers
   ];
   services.xserver = {
     enable = true;

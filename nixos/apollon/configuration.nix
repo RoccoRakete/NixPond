@@ -20,6 +20,7 @@
     # ../modules/docker/docker.nix
     ../modules/podman/podman.nix
     # ../modules/samba/ad-client.nix
+    ../modules/solaar/solaar.nix
     inputs.home-manager.nixosModules.home-manager
   ];
 
