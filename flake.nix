@@ -67,6 +67,9 @@
       url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz"; # For latest stable version
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # GIMP3
+    adw-gimp3.url = "github:dp0sk/adw-gimp3";
   };
 
   outputs =
@@ -86,6 +89,7 @@
       plasma-manager,
       powertray,
       solaar,
+      adw-gimp3,
       ...
     }@inputs:
     let
