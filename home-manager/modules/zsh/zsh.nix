@@ -35,7 +35,7 @@
       pushd = "cd ~/.config/nixcfg/ && git add -A && git commit -a && git push && cd -";
       pulld = "cd ~/.config/nixcfg/ && git add -A && git pull && cd -";
 
-      flake-update = " pulld && nix flake update --flake ~/.config/nixcfg/";
+      flake-update = "gita && pulld && nix flake update --flake ~/.config/nixcfg/";
 
       update-media = " pulld && nh os switch --hostname nixos_media ~/.config/nixcfg/";
       full-upgrade-media = "flake-update && update-media";
