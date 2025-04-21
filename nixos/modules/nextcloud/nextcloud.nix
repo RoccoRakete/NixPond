@@ -8,27 +8,6 @@
     database.createLocally = true;
     https = true;
     configureRedis = true;
-    # ensureUsers = {
-    #   martin = {
-    #     email = "m.schaumann@mscloud.uk";
-    #     passwordFile = "/etc/nextcloud-user-pass";
-    #   };
-    # };
-    extraApps = {
-      inherit (config.services.nextcloud.package.packages.apps)
-        news
-        mail
-        contacts
-        calendar
-        tasks
-        twofactor_webauthn
-        ;
-      # twofactor_totp = pkgs.fetchNextcloudApp {
-      #   url = "https://github.com/pulsejet/memories/releases/download/v6.2.2/memories.tar.gz";
-      #   hash = "sha256-Xr1SRSmXo2r8yOGuoMyoXhD0oPVm/0/ISHlmNZpJYsg=";
-      #   license = "agpl3Only";
-      # };
-    };
     extraAppsEnable = true;
     caching = {
       redis = true;
@@ -65,6 +44,21 @@
     };
     phpOptions = {
       "opcache.interned_strings_buffer" = "30";
+    };
+    extraApps = {
+      inherit (config.services.nextcloud.package.packages.apps)
+        news
+        mail
+        contacts
+        calendar
+        tasks
+        twofactor_webauthn
+        ;
+      # twofactor_totp = pkgs.fetchNextcloudApp {
+      #   url = "https://github.com/pulsejet/memories/releases/download/v6.2.2/memories.tar.gz";
+      #   hash = "sha256-Xr1SRSmXo2r8yOGuoMyoXhD0oPVm/0/ISHlmNZpJYsg=";
+      #   license = "agpl3Only";
+      # };
     };
   };
 
