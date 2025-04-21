@@ -68,7 +68,7 @@
   home.packages = with pkgs; [
     # inputs.hyprpanel.packages.${system}.default
     inputs.zen-browser.packages."${system}".beta
-    adw-gimp3.homeManagerModules.default
+    inputs.adw-gimp3.packages.homeManagerModules.default
   ];
 
   # Enable home-manager
